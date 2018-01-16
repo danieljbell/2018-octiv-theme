@@ -22,10 +22,24 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .octiv-icon-list .octiv-icon-img-container { margin: 0 auto 1em; width: 85px; height: 85px; background-color: #f0f0f0; border: 5px solid #fff; -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); border-radius: 50%; position: relative; }
 .octiv-icon-list .octiv-icon-img-container img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: 65px; max-height: 65px; }
 #content_editor .octiv-icon-list .octiv-icon-content-container *, .pdf-page-content .octiv-icon-list .octiv-icon-content-container * { font-size: 0.8em !important; line-height: 1.3 !important; }
+#content_editor .octiv-icon-list .octiv-icon-content-container p, .pdf-page-content .octiv-icon-list .octiv-icon-content-container p { font-size: 0.8em !important; line-height: 1.3 !important; color: #9aacbb; }
 .octiv-brand-two-callout { background-color: #42b0d8; padding: 30px; }
 #content_editor .octiv-brand-two-callout *, .pdf-page-content .octiv-brand-two-callout * { color: #fff; }
 #content_editor .octiv-brand-two-callout *:last-child, .pdf-page-content .octiv-brand-two-callout *:last-child { margin-bottom: 0 !important; }
 .octiv-full-width { position: relative; left: -30px; width: calc(100% + 60px); }
+.octiv-employee-feature { position: relative; margin-bottom: -20px; }
+.octiv-employee-feature:after { content: ''; display: table; clear: both; }
+.octiv-employee-feature .octiv-employee-feature-headshot { float: right; position: relative; }
+.octiv-employee-feature .octiv-employee-feature-headshot:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(55%, rgba(255, 255, 255, 0))); background-image: -webkit-linear-gradient(left, white, rgba(255, 255, 255, 0) 55%); background-image: -o-linear-gradient(left, white, rgba(255, 255, 255, 0) 55%); background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0) 55%); }
+.octiv-employee-feature .octiv-employee-feature-headshot img { display: block; }
+.octiv-employee-feature .octiv-employee-feature-content { padding-left: 30px; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
+.octiv-employee-feature .octiv-employee-feature-name { text-transform: uppercase; }
+.octiv-employee-feature .octiv-employee-feature-title { font-style: italic; }
+#content_editor .octiv-employee-feature .octiv-employee-feature-title, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-title { font-size: 1.2em !important; line-height: 1 !important; margin-bottom: 0.5em !important; color: #8ba0b1; }
+.octiv-employee-feature .octiv-employee-feature-social-list { list-style-type: none; display: table; }
+#content_editor .octiv-employee-feature .octiv-employee-feature-social-list, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-social-list { padding-left: 0 !important; }
+.octiv-employee-feature .octiv-employee-feature-social-item { display: table-cell; padding-left: 10px; }
+.octiv-employee-feature .octiv-employee-feature-social-item:first-child { padding-left: 0; }
 #content_editor h1, .pdf-page-content h1, #content_editor h2, .pdf-page-content h2, #content_editor h3, .pdf-page-content h3, #content_editor h4, .pdf-page-content h4, #content_editor h5, .pdf-page-content h5, #content_editor h6, .pdf-page-content h6 { line-height: 1.4 !important; }
 #content_editor p, .pdf-page-content p { margin-bottom: 1em !important; }
 #content_editor ul, .pdf-page-content ul, #content_editor ol, .pdf-page-content ol { padding-left: 1em !important; margin-bottom: 1em !important; }

@@ -9,6 +9,7 @@ exclude:
   - project-champaigne.xd
   - README.md
   - package.json
+  - npm-debug.log
 
 collections:
   pages:

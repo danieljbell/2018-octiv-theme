@@ -1,0 +1,73 @@
+.octiv-employee-feature {
+  position: relative;
+  margin-bottom: -20px;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .octiv-employee-feature-headshot {
+    float: right;
+    position: relative;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, rgba(white, 1), rgba(white, 0) 55%);
+    }
+
+    img {
+      display: block;
+    }
+
+  }
+
+  .octiv-employee-feature-content {
+    padding-left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .octiv-employee-feature-name {
+    text-transform: uppercase;
+  }
+
+  .octiv-employee-feature-title {
+    font-style: italic;
+    #content_editor &,
+    .pdf-page-content & {
+      font-size: 1.2em !important;
+      line-height: 1 !important;
+      margin-bottom: 0.5em !important;
+      color: lighten($base-text-color, 40%);
+    }
+  }
+
+  .octiv-employee-feature-social-list {
+    list-style-type: none;
+    display: table;
+    #content_editor &,
+    .pdf-page-content & {
+      padding-left: 0 !important;
+    }
+  }
+
+  .octiv-employee-feature-social-item {
+    display: table-cell;
+    padding-left: 10px;
+    &:first-child {
+      padding-left: 0;
+    }
+    
+  }
+
+
+
+}
