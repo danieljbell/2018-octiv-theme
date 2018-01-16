@@ -26,18 +26,18 @@ gulp.task('css', function () {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./css'))
     .pipe(gulp.dest('_site/css'))
-    .pipe(browserSync.stream());
+    //.pipe(browserSync.stream());
   gulp.src(['_src/client/_client_variables.scss', '_src/client/client-theme.scss'])
     .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(gulp.dest('./_includes'))
-    .pipe(browserSync.stream());  
+    //.pipe(browserSync.stream());  
   gulp.src('_src/client/theme-builder.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(gulp.dest('./css'))
     .pipe(gulp.dest('_site/css'))
-    .pipe(browserSync.stream());
+    //.pipe(browserSync.stream());
 });
 
 gulp.task('js', function() {
@@ -49,14 +49,15 @@ gulp.task('js', function() {
 
 
 gulp.task('watch', function() {
-  gulp.watch('_src/**/*.scss', ['css']);
+  gulp.watch('_src/**/*.scss', ['css']).on('change', reload);
   gulp.watch('_src/**/*.js', ['js']).on('change', reload);
-  gulp.watch('**/*.html').on('change', reload);
+  gulp.watch('_pages/*.html').on('change', reload);
 });
 
 
 gulp.task('browser-sync', function() {
     browserSync.init({
+        reloadDelay: 500,
         proxy: 'localhost:4000',
         port: 3000
     });

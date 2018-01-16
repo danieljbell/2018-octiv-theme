@@ -1,6 +1,14 @@
-title: Client Name
+title: Octiv
 
-exclude: ['./source-file.pdf']
+exclude: 
+  - source-file.pdf
+  - node_modules
+  - gulpfile.js
+  - Gemfile
+  - Gemfile.lock
+  - project-champaigne.xd
+  - README.md
+  - package.json
 
 collections:
   pages:

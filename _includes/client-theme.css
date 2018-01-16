@@ -3,3 +3,77 @@
 GITHUB REPO: https://github.com/danieljbell/client-theme-template
 =================================================================
 */
+.octiv-hero { overflow: hidden; background-position: center; position: relative; z-index: 1; left: -30px; top: -20px; width: calc(100% + 60px); padding: 45px 100px; text-align: center; }
+.octiv-hero:before, .octiv-hero:after { content: ''; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background-color: #2d3943; opacity: 0.75; }
+.octiv-hero:before { -webkit-filter: blur(75px); filter: blur(75px); }
+#content_editor .octiv-hero h1, .pdf-page-content .octiv-hero h1 { font-weight: 700; }
+#content_editor .octiv-hero p, .pdf-page-content .octiv-hero p { font-size: 1.1em !important; line-height: 1.4 !important; color: #fff; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); margin-bottom: 0 !important; }
+.octiv-hero-has-notch { padding-bottom: 60px; }
+.color-boxes { margin-bottom: 1em; }
+#content_editor .color-boxes *, .pdf-page-content .color-boxes * { color: #fff; }
+.color-box-headline--brand-two { background-color: #42b0d8; border-radius: 4px; display: inline-block; }
+#content_editor .color-box-headline--brand-two, .pdf-page-content .color-box-headline--brand-two { line-height: 1 !important; padding: 0.25em 0.5em; }
+.octiv-notch { background-color: #f0f0f0; background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f0f0f0)); background-image: -webkit-linear-gradient(#fff, #f0f0f0); background-image: -o-linear-gradient(#fff, #f0f0f0); background-image: linear-gradient(#fff, #f0f0f0); padding: 1.5em; border: 1px solid #ccc; border-radius: 4px; -webkit-box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1); box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1); margin-top: -45px; position: relative; z-index: 1; }
+#content_editor .octiv-notch *:last-child, .pdf-page-content .octiv-notch *:last-child { margin-bottom: 0 !important; }
+.octiv-after-notch { padding-top: 60px !important; margin-top: -30px; }
+.octiv-icon-list { list-style-type: none; }
+#content_editor .octiv-icon-list, .pdf-page-content .octiv-icon-list { padding-left: 0 !important; }
+.octiv-icon-list .octiv-icon-item { text-align: center; }
+.octiv-icon-list .octiv-icon-img-container { margin: 0 auto 1em; width: 85px; height: 85px; background-color: #f0f0f0; border: 5px solid #fff; -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); border-radius: 50%; position: relative; }
+.octiv-icon-list .octiv-icon-img-container img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: 65px; max-height: 65px; }
+#content_editor .octiv-icon-list .octiv-icon-content-container *, .pdf-page-content .octiv-icon-list .octiv-icon-content-container * { font-size: 0.8em !important; line-height: 1.3 !important; }
+.octiv-brand-two-callout { background-color: #42b0d8; padding: 30px; }
+#content_editor .octiv-brand-two-callout *, .pdf-page-content .octiv-brand-two-callout * { color: #fff; }
+#content_editor .octiv-brand-two-callout *:last-child, .pdf-page-content .octiv-brand-two-callout *:last-child { margin-bottom: 0 !important; }
+.octiv-full-width { position: relative; left: -30px; width: calc(100% + 60px); }
+#content_editor h1, .pdf-page-content h1, #content_editor h2, .pdf-page-content h2, #content_editor h3, .pdf-page-content h3, #content_editor h4, .pdf-page-content h4, #content_editor h5, .pdf-page-content h5, #content_editor h6, .pdf-page-content h6 { line-height: 1.4 !important; }
+#content_editor p, .pdf-page-content p { margin-bottom: 1em !important; }
+#content_editor ul, .pdf-page-content ul, #content_editor ol, .pdf-page-content ol { padding-left: 1em !important; margin-bottom: 1em !important; }
+#content_editor hr, .pdf-page-content hr { margin-top: 1em; margin-bottom: 1em; border: 0; border-top: 1px solid #ccc; }
+#content_editor a:hover, .pdf-page-content a:hover { color: #fa7c45; }
+#content_editor table, .pdf-page-content table { margin-bottom: 1em; border: 0; background-color: #fff; }
+#content_editor table td, .pdf-page-content table td { padding: 0.5em; border-left: 1px solid #ccc; font-size: 0.9em !important; line-height: 1.4 !important; }
+#content_editor table td:last-child, .pdf-page-content table td:last-child { border-right: 1px solid #ccc; }
+#content_editor table tr:nth-child(2n) td, .pdf-page-content table tr:nth-child(2n) td { background-color: #f0f0f0; }
+#content_editor table tr:last-child td, .pdf-page-content table tr:last-child td { border-bottom: 1px solid #ccc; }
+#content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 30px !important; }
+#content_editor .no-gutters .half:nth-child(2n-1), .pdf-page-content .no-gutters .half:nth-child(2n-1) { padding-left: 0 !important; }
+#content_editor .no-gutters .half:nth-child(2n), .pdf-page-content .no-gutters .half:nth-child(2n) { padding-right: 0 !important; }
+#content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third { padding: 0 30px !important; margin-bottom: 1.5em; }
+#content_editor .no-gutters .one-third:nth-child(3n-2), .pdf-page-content .no-gutters .one-third:nth-child(3n-2) { padding-left: 0 !important; }
+#content_editor .no-gutters .one-third:nth-child(3n-1), .pdf-page-content .no-gutters .one-third:nth-child(3n-1) { padding-left: 15px !important; padding-right: 15px !important; }
+#content_editor .no-gutters .one-third:nth-child(3n), .pdf-page-content .no-gutters .one-third:nth-child(3n) { padding-right: 0px !important; }
+@supports ((display: -webkit-box) or (display: flex)) { #content_editor .grid.no-gutters { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  #content_editor .grid.no-gutters .one-third { -webkit-flex-basis: 33%; -ms-flex-preferred-size: 33%; flex-basis: 33%; }
+  @media screen and (max-width: 735px) { #content_editor .grid.no-gutters .one-third { -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; } } }
+.octiv-has-text-white { color: #fff !important; }
+.octiv-has-text-brand-two { color: #42b0d8 !important; }
+.octiv-heading-icon { max-width: 35px !important; max-height: 35px !important; margin-right: 0.5em !important; }
+.octiv-pad-y { padding-top: 30px !important; padding-bottom: 30px !important; }
+.octiv-pad-y-more { padding-top: 60px !important; padding-bottom: 60px !important; }
+.octiv-pad-t { padding-top: 30px !important; }
+.octiv-pad-t-more { padding-top: 60px !important; }
+.octiv-pad-b { padding-bottom: 30px !important; }
+.octiv-pad-b-more { padding-bottom: 60px !important; }
+.octiv-pad-x { padding-left: 30px !important; padding-right: 30px !important; }
+.octiv-pad-x-more { padding-left: 60px !important; padding-right: 60px !important; }
+.octiv-pad-l { padding-left: 30px !important; }
+.octiv-pad-l-more { padding-left: 60px !important; }
+.octiv-pad-r { padding-right: 30px !important; }
+.octiv-pad-r-more { padding-right: 60px !important; }
+.octiv-mar-y { margin-top: 30px !important; margin-bottom: 30px !important; }
+.octiv-mar-y-more { margin-top: 60px !important; margin-bottom: 60px !important; }
+.octiv-mar-t { margin-top: 30px !important; }
+.octiv-mar-t-more { margin-top: 60px !important; }
+.octiv-mar-b { margin-bottom: 30px !important; }
+.octiv-mar-b-more { margin-bottom: 60px !important; }
+.octiv-mar-b-neg { margin-bottom: -30px !important; }
+.octiv-mar-x { margin-left: 30px !important; margin-right: 30px !important; }
+.octiv-mar-x-more { margin-left: 60px !important; margin-right: 60px !important; }
+.octiv-mar-l { margin-left: 30px !important; }
+.octiv-mar-l-more { margin-left: 60px !important; }
+.octiv-mar-r { margin-right: 30px !important; }
+.octiv-mar-r-more { margin-right: 60px !important; }
+.octiv-b-a { border: 1px solid #fff; }
+@media screen and (max-width: 735px) { .octiv-hero { padding-left: 30px; padding-right: 30px; } #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third { padding: 0 !important; } }
+@media screen and (max-width: 568px) { .octiv-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }

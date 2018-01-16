@@ -1,0 +1,24 @@
+.octiv-notch {
+  background-color: $brand-lgray;
+  background-image: linear-gradient(#fff, $brand-lgray);
+  padding: 1.5em;
+  border: 1px solid $brand-gray;
+  border-radius: 4px;
+  box-shadow: 2px 3px 10px rgba(black, 0.1);
+  margin-top: -45px;
+  position: relative;
+  z-index: 1;
+
+  *:last-child {
+    #content_editor &,
+    .pdf-page-content & {
+      margin-bottom: 0 !important;
+    }
+  }
+
+}
+
+.octiv-after-notch {
+  padding-top: 60px !important;
+  margin-top: -30px;
+}

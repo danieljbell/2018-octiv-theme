@@ -1,0 +1,20 @@
+.color-boxes {
+  margin-bottom: 1em;
+
+  #content_editor & *,
+  .pdf-page-content & * {
+    color: #fff;
+  }
+
+}
+
+.color-box-headline--brand-two {
+  background-color: $brand-two;
+  border-radius: 4px;
+  display: inline-block;
+  #content_editor &,
+  .pdf-page-content & {
+    line-height: 1 !important;
+    padding: 0.25em 0.5em;
+  }
+}

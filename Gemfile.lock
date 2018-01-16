@@ -42,6 +42,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.5.0)
+  jekyll-watch
 
 BUNDLED WITH
    1.13.7

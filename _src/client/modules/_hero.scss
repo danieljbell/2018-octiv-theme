@@ -1,0 +1,55 @@
+.octiv-hero {
+  overflow: hidden;
+  // background-position: 0 0;
+  // background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  left: -30px;
+  top: -20px;
+  width: calc(100% + 60px);
+  padding: 45px 100px;
+  text-align: center;
+  @include mobile {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $base-text-color;
+    opacity: 0.75;
+  }
+
+  &:before {
+    filter: blur(75px);
+  }
+
+  #content_editor & h1,
+  .pdf-page-content & h1 {
+    font-weight: 700;
+  }
+  
+  p {
+    #content_editor &,
+    .pdf-page-content & {
+      font-size: 1.1em !important;
+      line-height: 1.4 !important;
+      color: #fff;
+      text-shadow: 2px 2px 2px rgba(black, 0.8);
+      margin-bottom: 0 !important;
+    }
+  }
+
+}
+
+.octiv-hero-has-notch {
+  padding-bottom: 60px;
+}

@@ -1,0 +1,17 @@
+.octiv-brand-two-callout {
+  background-color: $brand-two;
+  padding: 30px;
+
+  #content_editor & *,
+  .pdf-page-content & * {
+    color: #fff;  
+  }
+
+  *:last-child {
+    #content_editor &,
+    .pdf-page-content & {
+      margin-bottom: 0 !important;
+    }
+  }
+
+}

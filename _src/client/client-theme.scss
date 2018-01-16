@@ -1,7 +1,18 @@
 @import './_client_variables';
+@import './_mixins';
 
 /*
 =================================================================
 GITHUB REPO: https://github.com/danieljbell/client-theme-template
 =================================================================
 */
+
+@import './modules/hero';
+@import './modules/color-boxes';
+@import './modules/notch';
+@import './modules/icon-list';
+@import './modules/callouts';
+@import './modules/full-pages';
+
+@import './_overrides';
+@import './_utilities';
