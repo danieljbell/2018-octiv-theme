@@ -8,6 +8,9 @@
   margin-top: -45px;
   position: relative;
   z-index: 1;
+  @include mobile {
+    padding: 1em;
+  }
 
   *:last-child {
     #content_editor &,

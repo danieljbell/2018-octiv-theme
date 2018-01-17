@@ -14,6 +14,12 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 @import './modules/callouts';
 @import './modules/full-pages';
 @import './modules/employee-feature';
+@import './modules/person-container';
+@import './modules/content-toggle-list';
+@import './modules/card';
+
+@import './pages/case-study';
+@import './pages/integration';
 
 @import './_overrides';
 @import './_utilities';

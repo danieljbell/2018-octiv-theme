@@ -17,6 +17,13 @@
   line-height: 1.4 !important;
 }
 
+#content_editor h2,
+.pdf-page-content h2 {
+  @include mobile {
+    font-size: 1.3em !important;
+  }
+}
+
 #content_editor p,
 .pdf-page-content p {
   margin-bottom: 1em !important;
@@ -90,18 +97,21 @@
 .pdf-page-content .no-gutters .one-third {
   padding: 0 30px !important;
   margin-bottom: 1.5em;
+  @include mobile {
+    padding: 0 !important;
+  }
   &:nth-child(3n-2) {
     padding-left: 0 !important;
   }
   &:nth-child(3n-1) {
     padding-left: 15px !important;
     padding-right: 15px !important;
+    @include mobile {
+      padding: 0 !important;
+    }
   }
   &:nth-child(3n) {
     padding-right: 0px !important;
-  }
-  @include mobile {
-    padding: 0 !important;
   }
 }
 

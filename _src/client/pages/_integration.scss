@@ -1,0 +1,19 @@
+.octiv-integration {
+  
+  .octiv-notch {
+    padding: 2em 3em;
+    @include mobile {
+      padding: 1em;
+    }
+  }
+
+  .octiv-why-integration,
+  .octiv-integration-capabilities {
+    margin-top: 2.5em;
+  }
+
+  .octiv-card-image {
+    min-height: 100px;
+  }
+
+}

@@ -4,15 +4,21 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 =================================================================
 */
 .octiv-hero { overflow: hidden; background-position: center; position: relative; z-index: 1; left: -30px; top: -20px; width: calc(100% + 60px); padding: 45px 100px; text-align: center; }
-.octiv-hero:before, .octiv-hero:after { content: ''; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background-color: #2d3943; opacity: 0.75; }
+.octiv-hero:before, .octiv-hero:after { content: ''; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background-color: #2d3943; opacity: 0.65; }
 .octiv-hero:before { -webkit-filter: blur(75px); filter: blur(75px); }
 #content_editor .octiv-hero h1, .pdf-page-content .octiv-hero h1 { font-weight: 700; }
 #content_editor .octiv-hero p, .pdf-page-content .octiv-hero p { font-size: 1.1em !important; line-height: 1.4 !important; color: #fff; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); margin-bottom: 0 !important; }
 .octiv-hero-has-notch { padding-bottom: 60px; }
-.color-boxes { margin-bottom: 1em; }
-#content_editor .color-boxes *, .pdf-page-content .color-boxes * { color: #fff; }
-.color-box-headline--brand-two { background-color: #42b0d8; border-radius: 4px; display: inline-block; }
-#content_editor .color-box-headline--brand-two, .pdf-page-content .color-box-headline--brand-two { line-height: 1 !important; padding: 0.25em 0.5em; }
+.octiv-color-boxes { margin-bottom: 1em; text-align: center; }
+#content_editor .octiv-color-boxes *, .pdf-page-content .octiv-color-boxes * { color: #fff; }
+.octiv-color-box-headline--brand-two { background-color: #42b0d8; border-radius: 4px; display: inline-block; }
+#content_editor .octiv-color-box-headline--brand-two, .pdf-page-content .octiv-color-box-headline--brand-two { line-height: 1 !important; padding: 0.25em 0.5em; }
+.octiv-color-box-headline--brand-three { background-color: #33ab40; border-radius: 4px; display: inline-block; }
+#content_editor .octiv-color-box-headline--brand-three, .pdf-page-content .octiv-color-box-headline--brand-three { line-height: 1 !important; padding: 0.25em 0.5em; }
+.octiv-color-box-headline--brand-four { background-color: #b949f5; border-radius: 4px; display: inline-block; }
+#content_editor .octiv-color-box-headline--brand-four, .pdf-page-content .octiv-color-box-headline--brand-four { line-height: 1 !important; padding: 0.25em 0.5em; }
+.octiv-color-box-headline--brand-five { background-color: #fac500; border-radius: 4px; display: inline-block; }
+#content_editor .octiv-color-box-headline--brand-five, .pdf-page-content .octiv-color-box-headline--brand-five { line-height: 1 !important; padding: 0.25em 0.5em; }
 .octiv-notch { background-color: #f0f0f0; background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f0f0f0)); background-image: -webkit-linear-gradient(#fff, #f0f0f0); background-image: -o-linear-gradient(#fff, #f0f0f0); background-image: linear-gradient(#fff, #f0f0f0); padding: 1.5em; border: 1px solid #ccc; border-radius: 4px; -webkit-box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1); box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1); margin-top: -45px; position: relative; z-index: 1; }
 #content_editor .octiv-notch *:last-child, .pdf-page-content .octiv-notch *:last-child { margin-bottom: 0 !important; }
 .octiv-after-notch { padding-top: 60px !important; margin-top: -30px; }
@@ -20,9 +26,10 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 #content_editor .octiv-icon-list, .pdf-page-content .octiv-icon-list { padding-left: 0 !important; }
 .octiv-icon-list .octiv-icon-item { text-align: center; }
 .octiv-icon-list .octiv-icon-img-container { margin: 0 auto 1em; width: 85px; height: 85px; background-color: #f0f0f0; border: 5px solid #fff; -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); border-radius: 50%; position: relative; }
-.octiv-icon-list .octiv-icon-img-container img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: 65px; max-height: 65px; }
+#content_editor .octiv-icon-list .octiv-icon-img-container, .pdf-page-content .octiv-icon-list .octiv-icon-img-container { margin-bottom: 1em !important; }
+.octiv-icon-list .octiv-icon-img-container img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: 45px !important; max-height: 45px !important; }
 #content_editor .octiv-icon-list .octiv-icon-content-container *, .pdf-page-content .octiv-icon-list .octiv-icon-content-container * { font-size: 0.8em !important; line-height: 1.3 !important; }
-#content_editor .octiv-icon-list .octiv-icon-content-container p, .pdf-page-content .octiv-icon-list .octiv-icon-content-container p { font-size: 0.8em !important; line-height: 1.3 !important; color: #9aacbb; }
+#content_editor .octiv-icon-list .octiv-icon-content-container p, .pdf-page-content .octiv-icon-list .octiv-icon-content-container p { font-size: 0.7em !important; line-height: 1.3 !important; color: #7c93a7; }
 .octiv-brand-two-callout { background-color: #42b0d8; padding: 30px; }
 #content_editor .octiv-brand-two-callout *, .pdf-page-content .octiv-brand-two-callout * { color: #fff; }
 #content_editor .octiv-brand-two-callout *:last-child, .pdf-page-content .octiv-brand-two-callout *:last-child { margin-bottom: 0 !important; }
@@ -34,12 +41,65 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .octiv-employee-feature .octiv-employee-feature-headshot img { display: block; }
 .octiv-employee-feature .octiv-employee-feature-content { padding-left: 30px; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
 .octiv-employee-feature .octiv-employee-feature-name { text-transform: uppercase; }
+#content_editor .octiv-employee-feature .octiv-employee-feature-name, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-name { font-size: 2em !important; }
 .octiv-employee-feature .octiv-employee-feature-title { font-style: italic; }
 #content_editor .octiv-employee-feature .octiv-employee-feature-title, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-title { font-size: 1.2em !important; line-height: 1 !important; margin-bottom: 0.5em !important; color: #8ba0b1; }
 .octiv-employee-feature .octiv-employee-feature-social-list { list-style-type: none; display: table; }
 #content_editor .octiv-employee-feature .octiv-employee-feature-social-list, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-social-list { padding-left: 0 !important; }
 .octiv-employee-feature .octiv-employee-feature-social-item { display: table-cell; padding-left: 10px; }
 .octiv-employee-feature .octiv-employee-feature-social-item:first-child { padding-left: 0; }
+.octiv-person-container { display: table; margin-left: auto; margin-right: auto; }
+.octiv-person-container .octiv-person-content { display: table-cell; vertical-align: top; text-align: left; padding-left: 1em; }
+.octiv-person-container .octiv-person-headshot { border: 3px solid #fff; -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); border-radius: 50%; }
+.octiv-person-container .octiv-person-headshot img { border-radius: 50%; display: block; max-width: 75px !important; }
+#content_editor .octiv-person-container .octiv-person-name, .pdf-page-content .octiv-person-container .octiv-person-name, #content_editor .octiv-person-container .octiv-person-title, .pdf-page-content .octiv-person-container .octiv-person-title, #content_editor .octiv-person-container .octiv-person-company, .pdf-page-content .octiv-person-container .octiv-person-company { margin-bottom: 0 !important; color: #fff; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); }
+.octiv-person-container .octiv-person-name { text-transform: uppercase; font-weight: 700 !important; font-size: 1.4em !important; line-height: 1 !important; }
+#content_editor .octiv-person-container .octiv-person-name, .pdf-page-content .octiv-person-container .octiv-person-name { margin-bottom: 0.15em !important; }
+.octiv-person-container .octiv-person-title { font-style: italic; font-size: 0.8em !important; }
+.octiv-person-container .octiv-person-company { font-size: 0.8em !important; }
+.octiv-content-toggle-list { position: relative; list-style-type: none; }
+#content_editor .octiv-content-toggle-list, .pdf-page-content .octiv-content-toggle-list { padding-left: 0 !important; }
+.octiv-content-toggle-list .octiv-content-toggle-item { margin-bottom: 0.5em; }
+.slide-content { position: absolute; left: calc(100px + 1.5em); top: 0; -webkit-animation-name: slideOut; animation-name: slideOut; -webkit-animation-duration: 300ms; animation-duration: 300ms; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.slide-toggle { display: none; }
+.slide-toggle:checked + .slide-content { display: block; -webkit-animation-name: slideIn; animation-name: slideIn; -webkit-animation-duration: 300ms; animation-duration: 300ms; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+@-webkit-keyframes slideIn { from { -webkit-transform: translateX(-1.5em); transform: translateX(-1.5em);
+    opacity: 0; }
+  to { -webkit-transform: translateX(0px); transform: translateX(0px);
+    opacity: 1; } }
+@keyframes slideIn { from { -webkit-transform: translateX(-1.5em); transform: translateX(-1.5em);
+    opacity: 0; }
+  to { -webkit-transform: translateX(0px); transform: translateX(0px);
+    opacity: 1; } }
+@-webkit-keyframes slideOut { from { opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); }
+  to { opacity: 0;
+    -webkit-transform: translateX(1.5em);
+            transform: translateX(1.5em); } }
+@keyframes slideOut { from { opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); }
+  to { opacity: 0;
+    -webkit-transform: translateX(1.5em);
+            transform: translateX(1.5em); } }
+.octiv-card { border: 1px solid #ccc; -webkit-box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1); box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1); padding: 1em; border-radius: 4px; }
+.octiv-card h4 a { color: #2d3943 !important; }
+.octiv-card-image { position: relative; left: -1em; top: -1em; width: calc(100% + 2em); display: block; border-radius: 4px 4px 0 0; }
+.octiv-card-description { font-size: 0.8em !important; line-height: 1.4 !important; }
+.octiv-case-study .octiv-hero { margin-bottom: 10px; }
+.octiv-case-study .octiv-icon-item { text-align: left; text-align: left; display: table; width: 100%; margin-bottom: 2em; }
+.octiv-case-study .octiv-icon-item:last-child { margin-bottom: 0; }
+.octiv-case-study .octiv-icon-img-container { width: 85px !important; height: 85px !important; }
+.octiv-icon-item .octiv-case-study .octiv-icon-img-container { display: none; }
+.octiv-case-study .octiv-icon-content-container { display: table-cell; vertical-align: middle; padding-left: 1em; }
+#content_editor .octiv-case-study .octiv-icon-content-container h4, .pdf-page-content .octiv-case-study .octiv-icon-content-container h4 { font-size: 24px !important; line-height: 1.3 !important; }
+#content_editor .octiv-case-study .octiv-icon-content-container p, .pdf-page-content .octiv-case-study .octiv-icon-content-container p { font-size: 1em !important; line-height: 1.3 !important; color: #7c93a7; margin-bottom: 0 !important; }
+.octiv-case-study .octiv-cs-quote { margin-top: 2em; margin-bottom: 2em; padding: 2em 4em; background-image: -webkit-linear-gradient(280deg, rgba(185, 73, 245, 0.4) 45%, rgba(237, 76, 6, 0.4)), url(../img/octiv-pattern--light.png), -webkit-linear-gradient(280deg, #b949f5 45%, #ed4c06); background-image: -o-linear-gradient(280deg, rgba(185, 73, 245, 0.4) 45%, rgba(237, 76, 6, 0.4)), url(../img/octiv-pattern--light.png), -o-linear-gradient(280deg, #b949f5 45%, #ed4c06); background-image: linear-gradient(170deg, rgba(185, 73, 245, 0.4) 45%, rgba(237, 76, 6, 0.4)), url(../img/octiv-pattern--light.png), linear-gradient(170deg, #b949f5 45%, #ed4c06); text-align: center; }
+.octiv-case-study .octiv-cs-statement { color: #fff !important; text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8); font-size: 1.25em !important; line-height: 1.4 !important; }
+.octiv-integration .octiv-notch { padding: 2em 3em; }
+.octiv-integration .octiv-why-integration, .octiv-integration .octiv-integration-capabilities { margin-top: 2.5em; }
+.octiv-integration .octiv-card-image { min-height: 100px; }
 #content_editor h1, .pdf-page-content h1, #content_editor h2, .pdf-page-content h2, #content_editor h3, .pdf-page-content h3, #content_editor h4, .pdf-page-content h4, #content_editor h5, .pdf-page-content h5, #content_editor h6, .pdf-page-content h6 { line-height: 1.4 !important; }
 #content_editor p, .pdf-page-content p { margin-bottom: 1em !important; }
 #content_editor ul, .pdf-page-content ul, #content_editor ol, .pdf-page-content ol { padding-left: 1em !important; margin-bottom: 1em !important; }
@@ -62,7 +122,7 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
   @media screen and (max-width: 735px) { #content_editor .grid.no-gutters .one-third { -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; } } }
 .octiv-has-text-white { color: #fff !important; }
 .octiv-has-text-brand-two { color: #42b0d8 !important; }
-.octiv-heading-icon { max-width: 35px !important; max-height: 35px !important; margin-right: 0.5em !important; }
+.octiv-has-text-center { text-align: center !important; }
 .octiv-pad-y { padding-top: 30px !important; padding-bottom: 30px !important; }
 .octiv-pad-y-more { padding-top: 60px !important; padding-bottom: 60px !important; }
 .octiv-pad-t { padding-top: 30px !important; }
@@ -89,5 +149,8 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .octiv-mar-r { margin-right: 30px !important; }
 .octiv-mar-r-more { margin-right: 60px !important; }
 .octiv-b-a { border: 1px solid #fff; }
-@media screen and (max-width: 735px) { .octiv-hero { padding-left: 30px; padding-right: 30px; } #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third { padding: 0 !important; } }
+.octiv-video-outer { padding: 56.25% 0 0 0; position: relative; }
+.octiv-video-inner { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
+@media screen and (max-width: 735px) { .octiv-hero { padding-left: 30px; padding-right: 30px; } .octiv-notch { padding: 1em; } .octiv-icon-list .octiv-icon-item { text-align: left; display: table; width: 100%; }
+  #content_editor .octiv-icon-list .octiv-icon-item.unit.one-third { padding: 0 !important; } .octiv-icon-list .octiv-icon-img-wrapper, .octiv-icon-list .octiv-icon-content-container { display: table-cell; vertical-align: middle; } .octiv-icon-list .octiv-icon-img-wrapper { width: 65px; } #content_editor .octiv-icon-list .octiv-icon-img-container, .pdf-page-content .octiv-icon-list .octiv-icon-img-container { margin-bottom: 0 !important; } .octiv-icon-list .octiv-icon-img-container { width: 65px; height: 65px; border: 3px solid #fff; } .octiv-icon-list .octiv-icon-img-container img { max-width: 35px !important; max-height: 35px !important; } .octiv-icon-list .octiv-icon-content-container { padding-left: 1em; } .octiv-employee-feature .octiv-employee-feature-headshot { float: none; border: 3px solid #fff; border-radius: 50%; -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); overflow: hidden; width: 100px; height: 100px; margin: 1em auto; } .octiv-employee-feature .octiv-employee-feature-headshot img { position: absolute; max-width: 240px !important; right: -10px; } .octiv-employee-feature .octiv-employee-feature-content { position: static; -webkit-transform: translateY(0%); -ms-transform: translateY(0%); transform: translateY(0%); text-align: center; padding-left: 0; } #content_editor .octiv-employee-feature .octiv-employee-feature-name, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-name { font-size: 1.3em !important; } #content_editor .octiv-employee-feature .octiv-employee-feature-title, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-title { font-size: 1em !important; } .octiv-employee-feature .octiv-employee-feature-social-list { margin: 0 auto; } .octiv-person-container { display: block; } .octiv-person-container .octiv-person-content { display: block; padding-left: 0; } .octiv-person-container .octiv-person-headshot { max-width: 80px; overflow: hidden; margin: 1em auto 0.5em; } .octiv-person-container .octiv-person-name, .octiv-person-container .octiv-person-title, .octiv-person-container .octiv-person-company { text-align: center; } .octiv-case-study .octiv-icon-item { display: block; } .octiv-case-study .octiv-icon-img-container img { max-width: 45px !important; max-height: 45px !important; } .octiv-case-study .octiv-icon-content-container { padding-left: 0; } .octiv-case-study .octiv-cs-quote { padding: 2em; } .octiv-case-study .octiv-cs-statement { font-size: 1em !important; } .octiv-integration .octiv-notch { padding: 1em; } #content_editor h2, .pdf-page-content h2 { font-size: 1.3em !important; } #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third { padding: 0 !important; } #content_editor .no-gutters .one-third:nth-child(3n-1), .pdf-page-content .no-gutters .one-third:nth-child(3n-1) { padding: 0 !important; } }
 @media screen and (max-width: 568px) { .octiv-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }

@@ -1,5 +1,17 @@
-.color-boxes {
+@mixin octiv-color-box-headline($color) {
+  background-color: $color;
+  border-radius: 4px;
+  display: inline-block;
+  #content_editor &,
+  .pdf-page-content & {
+    line-height: 1 !important;
+    padding: 0.25em 0.5em;
+  }  
+}
+
+.octiv-color-boxes {
   margin-bottom: 1em;
+  text-align: center;
 
   #content_editor & *,
   .pdf-page-content & * {
@@ -8,13 +20,18 @@
 
 }
 
-.color-box-headline--brand-two {
-  background-color: $brand-two;
-  border-radius: 4px;
-  display: inline-block;
-  #content_editor &,
-  .pdf-page-content & {
-    line-height: 1 !important;
-    padding: 0.25em 0.5em;
-  }
+.octiv-color-box-headline--brand-two {
+  @include octiv-color-box-headline($brand-two);
+}
+
+.octiv-color-box-headline--brand-three {
+  @include octiv-color-box-headline($brand-three);
+}
+
+.octiv-color-box-headline--brand-four {
+  @include octiv-color-box-headline($brand-four);
+}
+
+.octiv-color-box-headline--brand-five {
+  @include octiv-color-box-headline($brand-five);
 }

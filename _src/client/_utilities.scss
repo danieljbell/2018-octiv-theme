@@ -15,10 +15,8 @@
   color: $brand-two !important;
 }
 
-.octiv-heading-icon {
-  max-width: 35px !important;
-  max-height: 35px !important;
-  margin-right: 0.5em !important;
+.octiv-has-text-center {
+  text-align: center !important;
 }
 
 
@@ -126,4 +124,21 @@
 
 .octiv-b-a {
   border: 1px solid #fff;
+}
+
+
+// ===========================
+// RESPONSIVE VIDEO CONTAINERS
+// ===========================
+.octiv-video-outer {
+  padding: 56.25% 0 0 0;
+  position: relative;
+}
+
+.octiv-video-inner {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
