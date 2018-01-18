@@ -4,6 +4,13 @@
   padding: 1em;
   border-radius: 4px;
 
+  h4 {
+    #content_editor &,
+    .pdf-page-content & {
+      line-height: 1em !important;
+    }
+  }
+
   h4 a {
     color: $heading-four-text-color !important;
   }
@@ -17,6 +24,30 @@
   width: calc(100% + 2em);
   display: block;
   border-radius: 4px 4px 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.octiv-card-image-with-content {
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparentize($base-text-color, 0.3);
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - 2em) !important;
+  }
+
 }
 
 .octiv-card-description {

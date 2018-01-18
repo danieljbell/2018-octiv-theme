@@ -9,6 +9,16 @@
 
   .octiv-content-toggle-item {
     margin-bottom: 0.5em;
+    @include mobile {
+      margin-bottom: 1em;
+    }
+
+    label {
+      @include mobile {
+        display: none;
+      }
+    }
+
   }
 
 }
@@ -21,6 +31,10 @@
   animation-duration: 300ms;
   animation-timing-function: linear;
   animation-fill-mode: both;
+  @include mobile {
+    animation-name: none;
+    position: static;
+  }
 }
 
 .slide-toggle {
@@ -33,17 +47,22 @@
   animation-duration: 300ms;
   animation-timing-function: linear;
   animation-fill-mode: both;
+  @include mobile {
+    animation-name: none;
+  }
 }
 
 @keyframes slideIn {
   from {
     transform: translateX(-1.5em);
     opacity: 0;
+    visibility: hidden;
   }
 
   to {
     transform: translateX(0px);
     opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -51,10 +70,12 @@
   from {
     opacity: 1;
     transform: translateX(0px);
+    visibility: visible;
   }
 
   to {
     opacity: 0;
     transform: translateX(1.5em);
+    visibility: hidden;
   }
 }

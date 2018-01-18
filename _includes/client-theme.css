@@ -64,29 +64,45 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .slide-toggle { display: none; }
 .slide-toggle:checked + .slide-content { display: block; -webkit-animation-name: slideIn; animation-name: slideIn; -webkit-animation-duration: 300ms; animation-duration: 300ms; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
 @-webkit-keyframes slideIn { from { -webkit-transform: translateX(-1.5em); transform: translateX(-1.5em);
-    opacity: 0; }
+    opacity: 0;
+    visibility: hidden; }
   to { -webkit-transform: translateX(0px); transform: translateX(0px);
-    opacity: 1; } }
+    opacity: 1;
+    visibility: visible; } }
 @keyframes slideIn { from { -webkit-transform: translateX(-1.5em); transform: translateX(-1.5em);
-    opacity: 0; }
+    opacity: 0;
+    visibility: hidden; }
   to { -webkit-transform: translateX(0px); transform: translateX(0px);
-    opacity: 1; } }
+    opacity: 1;
+    visibility: visible; } }
 @-webkit-keyframes slideOut { from { opacity: 1;
     -webkit-transform: translateX(0px);
-            transform: translateX(0px); }
+            transform: translateX(0px);
+    visibility: visible; }
   to { opacity: 0;
     -webkit-transform: translateX(1.5em);
-            transform: translateX(1.5em); } }
+            transform: translateX(1.5em);
+    visibility: hidden; } }
 @keyframes slideOut { from { opacity: 1;
     -webkit-transform: translateX(0px);
-            transform: translateX(0px); }
+            transform: translateX(0px);
+    visibility: visible; }
   to { opacity: 0;
     -webkit-transform: translateX(1.5em);
-            transform: translateX(1.5em); } }
+            transform: translateX(1.5em);
+    visibility: hidden; } }
 .octiv-card { border: 1px solid #ccc; -webkit-box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1); box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1); padding: 1em; border-radius: 4px; }
+#content_editor .octiv-card h4, .pdf-page-content .octiv-card h4 { line-height: 1em !important; }
 .octiv-card h4 a { color: #2d3943 !important; }
-.octiv-card-image { position: relative; left: -1em; top: -1em; width: calc(100% + 2em); display: block; border-radius: 4px 4px 0 0; }
+.octiv-card-image { position: relative; left: -1em; top: -1em; width: calc(100% + 2em); display: block; border-radius: 4px 4px 0 0; background-size: cover; background-position: center; }
+.octiv-card-image-with-content:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(45, 57, 67, 0.7); }
+.octiv-card-image-with-content img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: calc(100% - 2em) !important; }
 .octiv-card-description { font-size: 0.8em !important; line-height: 1.4 !important; }
+.octiv-btn-arrow { position: relative; }
+#content_editor .octiv-btn-arrow, .octiv-btn-arrow .pdf-page-content { color: #2d3943; font-weight: bold; }
+#content_editor .octiv-btn-arrow:hover, .octiv-btn-arrow:hover .pdf-page-content { color: #2d3943; }
+.octiv-btn-arrow:before { content: ''; position: absolute; top: 100%; left: 0; right: 0; background-color: #42b0d8; height: 1em; max-height: 3px; }
+.octiv-btn-arrow:after { content: '\003E'; display: inline-block; margin-left: 0.5em; }
 .octiv-case-study .octiv-hero { margin-bottom: 10px; }
 .octiv-case-study .octiv-icon-item { text-align: left; text-align: left; display: table; width: 100%; margin-bottom: 2em; }
 .octiv-case-study .octiv-icon-item:last-child { margin-bottom: 0; }
@@ -99,7 +115,7 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .octiv-case-study .octiv-cs-statement { color: #fff !important; text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8); font-size: 1.25em !important; line-height: 1.4 !important; }
 .octiv-integration .octiv-notch { padding: 2em 3em; }
 .octiv-integration .octiv-why-integration, .octiv-integration .octiv-integration-capabilities { margin-top: 2.5em; }
-.octiv-integration .octiv-card-image { min-height: 100px; }
+.octiv-integration .octiv-card-image { min-height: 150px; }
 #content_editor h1, .pdf-page-content h1, #content_editor h2, .pdf-page-content h2, #content_editor h3, .pdf-page-content h3, #content_editor h4, .pdf-page-content h4, #content_editor h5, .pdf-page-content h5, #content_editor h6, .pdf-page-content h6 { line-height: 1.4 !important; }
 #content_editor p, .pdf-page-content p { margin-bottom: 1em !important; }
 #content_editor ul, .pdf-page-content ul, #content_editor ol, .pdf-page-content ol { padding-left: 1em !important; margin-bottom: 1em !important; }
@@ -152,5 +168,5 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .octiv-video-outer { padding: 56.25% 0 0 0; position: relative; }
 .octiv-video-inner { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
 @media screen and (max-width: 735px) { .octiv-hero { padding-left: 30px; padding-right: 30px; } .octiv-notch { padding: 1em; } .octiv-icon-list .octiv-icon-item { text-align: left; display: table; width: 100%; }
-  #content_editor .octiv-icon-list .octiv-icon-item.unit.one-third { padding: 0 !important; } .octiv-icon-list .octiv-icon-img-wrapper, .octiv-icon-list .octiv-icon-content-container { display: table-cell; vertical-align: middle; } .octiv-icon-list .octiv-icon-img-wrapper { width: 65px; } #content_editor .octiv-icon-list .octiv-icon-img-container, .pdf-page-content .octiv-icon-list .octiv-icon-img-container { margin-bottom: 0 !important; } .octiv-icon-list .octiv-icon-img-container { width: 65px; height: 65px; border: 3px solid #fff; } .octiv-icon-list .octiv-icon-img-container img { max-width: 35px !important; max-height: 35px !important; } .octiv-icon-list .octiv-icon-content-container { padding-left: 1em; } .octiv-employee-feature .octiv-employee-feature-headshot { float: none; border: 3px solid #fff; border-radius: 50%; -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); overflow: hidden; width: 100px; height: 100px; margin: 1em auto; } .octiv-employee-feature .octiv-employee-feature-headshot img { position: absolute; max-width: 240px !important; right: -10px; } .octiv-employee-feature .octiv-employee-feature-content { position: static; -webkit-transform: translateY(0%); -ms-transform: translateY(0%); transform: translateY(0%); text-align: center; padding-left: 0; } #content_editor .octiv-employee-feature .octiv-employee-feature-name, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-name { font-size: 1.3em !important; } #content_editor .octiv-employee-feature .octiv-employee-feature-title, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-title { font-size: 1em !important; } .octiv-employee-feature .octiv-employee-feature-social-list { margin: 0 auto; } .octiv-person-container { display: block; } .octiv-person-container .octiv-person-content { display: block; padding-left: 0; } .octiv-person-container .octiv-person-headshot { max-width: 80px; overflow: hidden; margin: 1em auto 0.5em; } .octiv-person-container .octiv-person-name, .octiv-person-container .octiv-person-title, .octiv-person-container .octiv-person-company { text-align: center; } .octiv-case-study .octiv-icon-item { display: block; } .octiv-case-study .octiv-icon-img-container img { max-width: 45px !important; max-height: 45px !important; } .octiv-case-study .octiv-icon-content-container { padding-left: 0; } .octiv-case-study .octiv-cs-quote { padding: 2em; } .octiv-case-study .octiv-cs-statement { font-size: 1em !important; } .octiv-integration .octiv-notch { padding: 1em; } #content_editor h2, .pdf-page-content h2 { font-size: 1.3em !important; } #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third { padding: 0 !important; } #content_editor .no-gutters .one-third:nth-child(3n-1), .pdf-page-content .no-gutters .one-third:nth-child(3n-1) { padding: 0 !important; } }
+  #content_editor .octiv-icon-list .octiv-icon-item.unit.one-third { padding: 0 !important; } .octiv-icon-list .octiv-icon-img-wrapper, .octiv-icon-list .octiv-icon-content-container { display: table-cell; vertical-align: middle; } .octiv-icon-list .octiv-icon-img-wrapper { width: 65px; } #content_editor .octiv-icon-list .octiv-icon-img-container, .pdf-page-content .octiv-icon-list .octiv-icon-img-container { margin-bottom: 0 !important; } .octiv-icon-list .octiv-icon-img-container { width: 65px; height: 65px; border: 3px solid #fff; } .octiv-icon-list .octiv-icon-img-container img { max-width: 35px !important; max-height: 35px !important; } .octiv-icon-list .octiv-icon-content-container { padding-left: 1em; } .octiv-employee-feature .octiv-employee-feature-headshot { float: none; border: 3px solid #fff; border-radius: 50%; -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2); overflow: hidden; width: 100px; height: 100px; margin: 1em auto; } .octiv-employee-feature .octiv-employee-feature-headshot img { position: absolute; max-width: 240px !important; right: -10px; } .octiv-employee-feature .octiv-employee-feature-content { position: static; -webkit-transform: translateY(0%); -ms-transform: translateY(0%); transform: translateY(0%); text-align: center; padding-left: 0; } #content_editor .octiv-employee-feature .octiv-employee-feature-name, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-name { font-size: 1.3em !important; } #content_editor .octiv-employee-feature .octiv-employee-feature-title, .pdf-page-content .octiv-employee-feature .octiv-employee-feature-title { font-size: 1em !important; } .octiv-employee-feature .octiv-employee-feature-social-list { margin: 0 auto; } .octiv-person-container { display: block; } .octiv-person-container .octiv-person-content { display: block; padding-left: 0; } .octiv-person-container .octiv-person-headshot { max-width: 80px; overflow: hidden; margin: 1em auto 0.5em; } .octiv-person-container .octiv-person-name, .octiv-person-container .octiv-person-title, .octiv-person-container .octiv-person-company { text-align: center; } .octiv-content-toggle-list .octiv-content-toggle-item { margin-bottom: 1em; } .octiv-content-toggle-list .octiv-content-toggle-item label { display: none; } .slide-content { -webkit-animation-name: none; animation-name: none; position: static; } .slide-toggle:checked + .slide-content { -webkit-animation-name: none; animation-name: none; } .octiv-case-study .octiv-icon-item { display: block; } .octiv-case-study .octiv-icon-img-container img { max-width: 45px !important; max-height: 45px !important; } .octiv-case-study .octiv-icon-content-container { padding-left: 0; } .octiv-case-study .octiv-cs-quote { padding: 2em; } .octiv-case-study .octiv-cs-statement { font-size: 1em !important; } .octiv-integration .octiv-notch { padding: 1em; } #content_editor h2, .pdf-page-content h2 { font-size: 1.3em !important; } #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third { padding: 0 !important; } #content_editor .no-gutters .one-third:nth-child(3n-1), .pdf-page-content .no-gutters .one-third:nth-child(3n-1) { padding: 0 !important; } }
 @media screen and (max-width: 568px) { .octiv-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }
