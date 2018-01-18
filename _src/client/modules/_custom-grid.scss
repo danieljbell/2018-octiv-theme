@@ -1,0 +1,11 @@
+.octiv-four-child-items {
+  @include print {
+    display: table;
+    > * {
+      display: table-cell;
+    }
+    .print-only img {
+      max-width: 100% !important;
+    }
+  }
+}

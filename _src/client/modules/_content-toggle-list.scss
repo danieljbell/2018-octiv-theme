@@ -13,8 +13,19 @@
       margin-bottom: 1em;
     }
 
+    .print-only img {
+      border: 2px solid $brand-lgray;
+    }
+
     label {
+      img {
+        max-width: 100px !important;
+        border: 1px solid $brand-lgray;
+      }
       @include mobile {
+        display: none;
+      }
+      @include print {
         display: none;
       }
     }
@@ -23,7 +34,7 @@
 
 }
 
-.slide-content {
+.octiv-slide-content {
   position: absolute;
   left: calc(100px + 1.5em);
   top: 0;
@@ -35,13 +46,16 @@
     animation-name: none;
     position: static;
   }
+  @include print {
+    display: none;
+  }
 }
 
-.slide-toggle {
+.octiv-slide-toggle {
   display: none;
 }
 
-.slide-toggle:checked + .slide-content {
+.octiv-slide-toggle:checked + .octiv-slide-content {
   display: block;
   animation-name: slideIn;
   animation-duration: 300ms;
