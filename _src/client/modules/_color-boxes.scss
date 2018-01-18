@@ -4,6 +4,8 @@
   display: inline-block;
   #content_editor &,
   .pdf-page-content & {
+    color: #fff !important;
+    font-weight: bold !important;
     line-height: 1 !important;
     padding: 0.25em 0.5em;
   }  

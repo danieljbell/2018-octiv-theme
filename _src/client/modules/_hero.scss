@@ -13,6 +13,11 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+  @include print {
+    top: -0.5in;
+    left: -0.5in;
+    width: 8.5in;
+  }
 
   &:before,
   &:after {
@@ -23,8 +28,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $base-text-color;
-    opacity: 0.65;
+    background-color: transparentize($base-text-color, 0.35);
+    @include print {
+      background-color: transparentize($base-text-color, 0.45);
+    }
   }
 
   &:before {
