@@ -3,6 +3,7 @@
   .octiv-hero {
     display: table;
     background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545);
+    min-height: 200px;
 
     &:before,
     &:after {
@@ -13,22 +14,47 @@
     .octiv-integration-plus-sign-wrap {
       display: table-cell;
       vertical-align: middle;
+      width: 50%;
+      position: relative;
+      @include print {
+        padding-top: 0.25in;
+        padding-bottom: 0.25in;
+      }
     }
 
     .octiv-integration-logo-container {
       padding: 0 2em;
+
+      &:first-child {
+        .octiv-integration-logo-wrap {
+          right: 1.5em;
+          @include print {
+            right: 0in;
+          }
+        } 
+      }
+
+    }
+
+    .octiv-integration-plus-sign-wrap {
+      width: auto;
     }
 
     .octiv-integration-logo-wrap {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       padding: 1em 0em;
       background-color: #fff;
       border-radius: 4px;
       box-shadow: 1px 2px 10px rgba(black, 0.3);
-      // max-width: 150px;
+      width: 100%;
+      max-width: 175px;
+      // min-height: 100px;
 
       img {
-        max-width: 175px !important;
-        max-height: 55px !important;
+        max-width: 85% !important;
+        max-height: 50px !important;
       }
 
     }
@@ -60,10 +86,21 @@
     margin-top: 2.5em;
   }
 
-  .octiv-icon-item {
+  .octiv-icon-item,
+  .octiv-content-toggle-item {
     @include print {
       float: left;
     }
+  }
+
+  .octiv-content-toggle-item {
+
+    img {
+      @include print {
+        border: 1px solid $brand-gray;
+      }
+    }
+
   }
 
   .octiv-card-image {

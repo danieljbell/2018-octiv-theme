@@ -1,11 +1,12 @@
 .octiv-four-child-items {
   @include print {
-    display: table;
-    > * {
-      display: table-cell;
-    }
-    .print-only img {
-      max-width: 100% !important;
+    .octiv-content-toggle-item {
+      display: inline-block;
+      max-width: 1.78125in;
+      margin-right: 0.125in;
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
     }
   }
 }
