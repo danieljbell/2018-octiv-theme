@@ -1,0 +1,14 @@
+.octiv-terms-conditions {
+  
+  .octiv-color-cards li {
+    @include print {
+      margin-right: 0.3125in;
+      max-width: 3.575in !important;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+}
+

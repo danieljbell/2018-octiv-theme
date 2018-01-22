@@ -21,11 +21,14 @@ GITHUB REPO: https://github.com/danieljbell/2018-octiv-theme
 @import './modules/custom-grid';
 @import './modules/color-cards';
 @import './modules/blockquote';
+@import './modules/table';
+@import './modules/number-list';
 
 @import './pages/intro-letter';
 @import './pages/case-study';
 @import './pages/integration';
 @import './pages/datasheet';
+@import './pages/terms-conditions';
 
 @import './_overrides';
 @import './_utilities';

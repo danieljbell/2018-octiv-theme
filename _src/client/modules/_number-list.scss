@@ -1,0 +1,55 @@
+@mixin octiv-number-list($color) {
+  counter-reset: octiv-fancy-number-list;
+  list-style-type: none;
+
+  li {
+    position: relative;
+    #content_editor &,
+    .pdf-page-content & {
+      padding-left: 1.25em;
+      margin-bottom: 1em;
+    }
+    
+    &:before {
+      counter-increment: octiv-fancy-number-list;
+      content: counter(octiv-fancy-number-list);
+      position: absolute;
+      top: -0.25em;
+      left: -1em;
+      background-color: $color;
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      line-height: 30px;
+      font-size: 0.9em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+  }  
+
+  ol {
+    list-style-type: lower-alpha;
+    li:before {
+      display: none;
+    }
+  }
+
+}
+
+.octiv-number-list-brand-two {
+  @include octiv-number-list($brand-two);
+}
+
+.octiv-number-list-brand-three {
+  @include octiv-number-list($brand-three);
+}
+
+.octiv-number-list-brand-four {
+  @include octiv-number-list($brand-four);
+}
+
+.octiv-number-list-brand-five {
+  @include octiv-number-list($brand-five);
+}

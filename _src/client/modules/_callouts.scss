@@ -1,5 +1,5 @@
-.octiv-brand-two-callout {
-  background-color: $brand-two;
+@mixin octiv-callout($color) {
+  background-color: $color;
   padding: 30px;
 
   #content_editor & *,
@@ -14,4 +14,20 @@
     }
   }
 
+}
+
+.octiv-brand-two-callout {
+  @include octiv-callout($brand-two);
+}
+
+.octiv-brand-three-callout {
+  @include octiv-callout($brand-three);
+}
+
+.octiv-brand-four-callout {
+  @include octiv-callout($brand-four);
+}
+
+.octiv-brand-five-callout {
+  @include octiv-callout($brand-five);
 }

@@ -29,6 +29,16 @@
   }
 }
 
+#content_editor h4,
+.pdf-page-content h4 {
+  @include mobile {
+    font-size: 1.15em !important;
+  }
+  @include print {
+    font-size: 1.25em !important; 
+  }
+}
+
 #content_editor p,
 .pdf-page-content p {
   margin-bottom: 1em !important;
@@ -43,6 +53,11 @@
 .pdf-page-content ol {
   padding-left: 1em !important;
   margin-bottom: 1em !important;
+  li {
+    font-size: 0.9em;
+    line-height: 1.4 !important;
+    font-weight: 300;
+  }
 }
 
 #content_editor hr,
