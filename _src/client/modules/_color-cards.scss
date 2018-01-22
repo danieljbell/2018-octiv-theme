@@ -1,0 +1,74 @@
+@mixin octiv-color-card($color) {
+  border: 1px solid $color;
+  border-radius: 4px;
+  background-color: #fff;
+  @include print {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    max-width: 2in;
+    margin-right: 0.28125in;
+    margin-bottom: 0.125in;
+    min-height: 1.3in;
+  }
+
+  h6 {
+    color: #fff !important;
+    padding: 0.25em 0.5em;
+    background-color: $color;
+  }
+  
+  ul {
+    list-style-type: disc;
+    #content_editor &,
+    .pdf-page-content & {
+      padding: 0.5em;
+      padding-left: 2em !important;
+      @include print {
+        padding-left: 1.5em !important;
+      }
+    }
+  }
+  
+  li {
+    margin-bottom: 0.3em;
+    color: lighten($base-text-color, 15%);
+    
+    #content_editor &,
+    .pdf-page-content & {
+      font-size: 0.8em !important;
+      line-height: 1.1 !important;
+    }
+
+  }
+
+}
+
+.octiv-color-cards {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  
+  #content_editor &,
+  .pdf-page-content & {
+    padding-left: 0 !important;
+  }
+
+}
+
+.octiv-color-card-brand-two {
+  @include octiv-color-card($brand-two);
+}
+
+.octiv-color-card-brand-three {
+  @include octiv-color-card($brand-three);
+}
+
+.octiv-color-card-brand-four {
+  @include octiv-color-card($brand-four);
+}
+
+.octiv-color-card-brand-five {
+  @include octiv-color-card($brand-five);
+}

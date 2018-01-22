@@ -10,3 +10,15 @@
     }
   }
 }
+
+.octiv-two-third-only {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  right: -1em;
+  @include mobile {
+    max-width: 100%;
+    right: auto;
+  }
+}

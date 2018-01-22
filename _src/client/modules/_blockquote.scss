@@ -1,0 +1,34 @@
+.octiv-block-quote {
+  position: relative;
+  margin: 2em 0 !important;
+  padding: 2em 4em;
+  background-image: linear-gradient(170deg, transparentize($brand-four, 0.6) 45%, transparentize($brand, 0.6)), url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545), linear-gradient(170deg, $brand-four 45%, $brand);
+  text-align: center;
+  @include mobile {
+    padding: 2em;
+  }
+  @include print {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545);
+    }
+  }
+}
+
+.octiv-block-statement {
+  color: #fff !important;
+  text-shadow: 2px 2px 3px rgba(black, 0.8);
+  font-size: 1.25em !important;
+  line-height: 1.4 !important;
+  @include mobile {
+    font-size: 1em !important;
+  }
+  @include print {
+    font-size: 1.1em !important;
+  }
+}
