@@ -1,0 +1,19 @@
+.custom_pricing {
+
+  td {
+    font-weight: bold;
+    span {
+      display: block;
+      font-weight: normal;
+      font-style: italic;
+      font-size: 0.9em;
+    }
+  }
+
+  tfoot {
+    td:first-child {
+      text-align: right;
+    }
+  }
+
+}

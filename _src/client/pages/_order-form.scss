@@ -1,0 +1,58 @@
+.octiv-order-form {
+
+  table {
+    #content_editor &,
+    .pdf-page-content & {
+      margin-bottom: 0;
+    }
+    
+    #content_editor & th,
+    #content_editor & td,
+    .pdf-page-content & th,
+    .pdf-page-content & td {
+      border: 0 !important;
+    }
+
+    thead {
+      th:nth-child(2n) {
+        text-align: right;
+      }
+    }
+
+    tr {
+
+      &:last-child td {
+        #content_editor &,
+        .pdf-page-content & {
+          border-bottom: 0 !important;
+        }
+      }
+
+    }
+
+    td {
+      
+      #content_editor &,
+      .pdf-page-content & {
+        border-bottom: 1px solid $brand-gray !important;
+      }
+
+      &:nth-child(2) {
+        text-align: right;
+      }
+
+    }
+
+  }
+
+  .octiv-color-cards {
+    display: initial; 
+    [class*="octiv-color-card"] {
+      margin-bottom: 2em;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
