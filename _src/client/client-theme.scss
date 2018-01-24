@@ -7,6 +7,12 @@ GITHUB REPO: https://github.com/danieljbell/2018-octiv-theme
 =================================================================
 */
 
+/* MAINFRAME HACK FOR LOGIN BG */
+body.view-login {
+  background-image: url(https://mytinder.s3.amazonaws.com/assets/themes/8028/background_original.jpg?1516293993);
+}
+/* END MAINFRAME HACKS */
+
 @import './modules/hero';
 @import './modules/color-boxes';
 @import './modules/notch';
@@ -23,6 +29,7 @@ GITHUB REPO: https://github.com/danieljbell/2018-octiv-theme
 @import './modules/blockquote';
 @import './modules/table';
 @import './modules/number-list';
+@import './modules/footnote';
 
 @import './pages/intro-letter';
 @import './pages/case-study';

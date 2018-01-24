@@ -1,0 +1,14 @@
+.octiv-footnote {
+  #content_editor &,
+  .pdf-page-content & {
+    font-size: 0.7em;
+    line-height: 1.4 !important;
+    @include print {
+      font-size: 0.6em;
+    }
+  }
+  font-style: italic;
+  li {
+    margin-bottom: 1em;
+  }
+}
