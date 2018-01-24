@@ -58,8 +58,8 @@
     .pdf-page-content & p {
       font-size: 1em !important;
       line-height: 1.3 !important;
-      color: lighten($base-text-color, 35%);
-      margin-bottom: 0 !important;
+      color: $base-text-color;
+      // margin-bottom: 0 !important;
       @include print {
         font-size: 0.9em !important;
       }
