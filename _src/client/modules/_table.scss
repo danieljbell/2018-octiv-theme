@@ -1,17 +1,46 @@
 .custom_pricing {
 
   td {
+    #content_editor &,
+    .pdf-page-content & {
+      padding: 0.85em 0.5em;
+    }
+  }
+
+  .octiv-product-name {
     font-weight: bold;
-    span {
-      display: block;
-      font-weight: normal;
-      font-style: italic;
-      font-size: 0.9em;
+    font-size: 1.2em;
+    .integer {
+      display: inline-block;
+      margin-right: 0.25em;
+    }
+  }
+
+  .octiv-product-details {
+    font-style: italic;
+  }
+
+  .octiv-product-description {
+    #content_editor &,
+    .pdf-page-content & {
+      font-size: 1em;
+      line-height: 1.4;
+      color: lighten($base-text-color, 20%);
+      margin-bottom: 0 !important;
+    }
+  }
+
+  tbody td:nth-child(2),
+  tfoot td {
+    #content_editor &,
+    .pdf-page-content & {
+      font-size: 1.1em !important; 
     }
   }
 
   tfoot {
     td:first-child {
+      width: 100%;
       text-align: right;
     }
   }

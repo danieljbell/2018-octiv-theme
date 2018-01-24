@@ -1,105 +1,121 @@
 ---
 ---
 <div class="octiv-order-form">
-  <ul class="octiv-color-cards">
-    <li class="octiv-color-card-brand-two">
-      <h6>Subscriptions<span>Annual Total</span></h6>
-      <table class="custom_pricing">
-        <tbody>
+  <section class="octiv-hero octiv-hero-has-notch" style="background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589376_original.jpg?1516293546);">
+    <div class="octiv-color-boxes">
+      <h1 class="octiv-color-box-headline--brand-two">Order Form</h1>
+    </div>
+    <p>Let's get down to business, my friend ;)</p>
+  </section>
+  <section class="octiv-notch">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iste rerum, autem sunt hic unde inventore in velit. Atque dolor velit, ipsa ullam vero numquam cum, quae totam explicabo eum saepe sequi excepturi molestias similique.</p>
+    <div class="octiv-employee-feature">
+      <div class="octiv-employee-feature-headshot">
+        <img src="https://mytinder.s3.amazonaws.com/assets/medias/589358_original.jpg?1516293544" alt="">
+      </div>
+      <div class="octiv-employee-feature-content">
+        <h3 class="octiv-employee-feature-name">Adam Becker</h3>
+        <p class="octiv-employee-feature-title">Sr. Director Account Management</p>
+      </div>
+    </div>
+  </section>
+  <section class="octiv-after-notch">
+    <ul class="octiv-color-cards">
+      <li class="octiv-color-card-brand-two">
+        <h6>Subscriptions<span>Annual Total</span></h6>
+        <table class="custom_pricing" data-filter="PricebookEntry.Product2.Family LIKE 'Subscription'" data-sort="PricebookEntry.Product2.ProductCode" data-source="OpportunityLineItems">
+          <tbody>
+            <tr>
+              <td>
+                <div class="octiv-product-name">
+                  <span class="integer" data-show-if="PricebookEntry.Product2.Name LIKE 'User' OR PricebookEntry.Product2.Name LIKE 'for Octiv' OR PricebookEntry.Product2.Name LIKE 'Sandbox'">[Quantity]</span>
+                  <span>[PricebookEntry.Product2.Name]</span>
+                </div>
+                <div class="octiv-product-details">
+                  <span data-show-if="PricebookEntry.Product2.Family != 'Subscription Features'">
+                    <span class="money">[Unit_Price__c]</span>
+                    <span data-show-if="PricebookEntry.Product2.Name LIKE 'User' OR PricebookEntry.Product2.Name LIKE 'for Octiv'">/user</span>
+                    /month
+                  </span>
+                  <p class="octiv-product-description" data-show-if="Description IS NOT BLANK">[Description]</p>
+                </div>
+              </td>
+              <td class="money">
+                <span data-show-if="PricebookEntry.Product2.Family != 'Subscription Features'">[ARR__c]</span><span data-show-if="PricebookEntry.Product2.Family = 'Subscription Features'"><em>Included&nbsp;</em></span>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
           <tr>
-            <td>25 Octiv Licenses<span>$50/user/month</span></td>
-            <td>$1,000</td>
+            <td><strong>Annual Subscription Investment:</strong></td>
+            <td class="money"><strong><span>{{number_to_currency(opportunity_arr__c)}}</span><br /></strong></td>
           </tr>
+          </tfoot>
+        </table>
+      </li>
+      <li class="octiv-color-card-brand-three">
+        <h6>One-Time Services<span>Annual Total</span></h6>
+        <table class="custom_pricing" data-filter="PricebookEntry.Product2.Family NLIKE 'Subscription'" data-sort="PricebookEntry.Product2.ProductCode" data-source="OpportunityLineItems">
+          <tbody>
+            <tr>
+              <td>
+                <div class="octiv-product-name">
+                  <span data-show-if="PricebookEntry.Product2.Family != 'Professional Services">
+                    <span class="integer">[Quantity]</span>
+                    Hour<span data-show-if="Quantity &gt; '1'">s</span>
+                    of
+                  </span>
+                  [PricebookEntry.Product2.Name]
+                  <span data-show-if="PricebookEntry.Product2.Family = 'Professional Services">Package</span>
+                </div>
+                <div class="octiv-product-details">
+                  <p class="octiv-product-description" data-show-if="Description IS NOT BLANK">[Description]</p>
+                </div>
+              </td>
+              <td class="money">[TotalPrice]</td>
+            </tr>
+          </tbody>
+          <tfoot>
           <tr>
-            <td>25 DocuSign Standard Licenses<span>$50/user/month</span></td>
-            <td>$1,000</td>
+            <td><strong>One-Time Services Investment:</strong></td>
+            <td class="money"><strong>{{number_to_currency(opportunity_total_services__c)}}</strong></td>
           </tr>
-          <tr>
-            <td>Account Workgroups<span>Required enterprise feature for separate working spaces</span></td>
-            <td>$1,000</td>
-          </tr>
-          <tr>
-            <td>Account Whitelabeling</td>
-            <td>$1,000</td>
-          </tr>
-          <tr>
-            <td>Premium Support</td>
-            <td>$1,000</td>
-          </tr>
-          <tr>
-            <td>Program Management</td>
-            <td>$1,000</td>
-          </tr>
-          <tr>
-            <td>Salesforce Integration Capability</td>
-            <td>$1,000</td>
-          </tr>
-          <tr>
-            <td>Docusign Integration Capability</td>
-            <td>$1,000</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td>Total Annual Investment</td>
-            <td>$138,000</td>
-          </tr>
-        </tfoot>
-      </table>
-    </li>
-    <li class="octiv-color-card-brand-three">
-      <h6>One-Time Services<span>Annual Total</span></h6>
-      <table class="custom_pricing">
-        <tbody>
-          <tr>
-            <td>75 Hours of Implementation Services<span>$50/user/month</span></td>
-            <td>$1,000</td>
-          </tr>
-          <tr>
-            <td>10 Hours of Technical Consultancy<span>$50/user/month</span></td>
-            <td>$1,000</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td>Total Annual Investment</td>
-            <td>$138,000</td>
-          </tr>
-        </tfoot>
-      </table>
-    </li>
-    <li class="octiv-color-card-brand">
-      <h6>Totals<span>Annual Total</span></h6>
-      <table class="custom_pricing">
-        <tbody>
-          <tr>
-            <td>25 Octiv Licenses<span>$50/user/month</span></td>
-            <td>$1,000</td>
-          </tr>
-          <tr>
-            <td>25 DocuSign Standard Licenses<span>$50/user/month</span></td>
-            <td>$1,000</td>
-          </tr>
-          <tr>
-            <td>Account Workgroups<span>Required enterprise feature for separate working spaces</span></td>
-            <td>$1,000</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td>Total Annual Investment (Year 1)</td>
-            <td>$138,000</td>
-          </tr>
-          <tr>
-            <td>Total Annual Investment (Year 2)</td>
-            <td>$138,000</td>
-          </tr>
-          <tr>
-            <td>Total Annual Investment (Year 3)</td>
-            <td>$138,000</td>
-          </tr>
-        </tfoot>
-      </table>
-    </li>
-  </ul>  
+          </tfoot>
+        </table>
+      </li>
+      <li class="octiv-color-card-brand">
+        <h6>Totals<span>Annual Total</span></h6>
+        <table class="custom_pricing" data-filter="PricebookEntry.Product2.Family NLIKE 'Subscription'" data-sort="PricebookEntry.Product2.ProductCode" data-source="OpportunityLineItems">
+          <tbody>
+            <tr>
+            <td>Annual Subscription Investment:</td>
+            <td class="money">{{number_to_currency(opportunity_arr__c)}}</td>
+            </tr>
+            <tr>
+              <td>One-Time Services Investment:</td>
+              <td class="money">{{number_to_currency(opportunity_total_services__c)}}</td>
+            </tr>  
+          </tbody>
+          <tfoot>
+            <tr data-show-if="Opportunity_Term_Months__c == '24' OR Opportunity_Term_Months__c == '36'">
+              <td>Total Investment Year 1:</td>
+              <td class="money">{{number_to_currency(opportunity_total_services__c + opportunity_arr__c)}}</td>
+            </tr>
+            <tr data-show-if="Opportunity_Term_Months__c == '24' OR Opportunity_Term_Months__c == '36">
+              <td>Total Investment Year 2:</td>
+              <td class="money">{{number_to_currency(opportunity_arr__c)}}</td>
+            </tr>
+            <tr data-show-if="Opportunity_Term_Months__c == '36'">
+              <td>Total Investment Year 3:</td>
+              <td class="money">{{number_to_currency(opportunity_arr__c)}}</td>
+            </tr>
+            <tr>
+              <td><strong>Total Contract Investment:</strong></td>
+              <td class="money"><span><strong>{{number_to_currency(opportunity_amount)}}</strong></span></td>
+            </tr>
+          </tfoot>
+        </table>
+      </li>
+    </ul>
+  </section>
 </div>

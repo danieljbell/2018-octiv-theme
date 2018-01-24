@@ -16,6 +16,10 @@
     color: #fff !important;
     padding: 0.25em 0.5em;
     background-color: $color;
+    #content_editor &,
+    .pdf-page-content & {
+      margin-bottom: 0;
+    }
   }
 
   ul,
@@ -74,10 +78,21 @@
   table thead,
   table thead th,
   table tfoot,
-  table tfoot td {
-    background-color: $color;
-    color: #fff !important;
-    font-weight: bold;
+  table tfoot td,
+  table tfoot tr:nth-child(2n) td {
+    #content_editor &,
+    .pdf-page-content & {
+      background-color: $color;
+      color: #fff !important;
+      font-weight: bold;
+    }
+  }
+
+  table tfoot tr td {
+    #content_editor &,
+    .pdf-page-content & {
+      border-bottom: 1px solid transparentize(#fff, 0.5) !important;
+    }
   }
 
 }
