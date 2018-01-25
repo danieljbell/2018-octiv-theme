@@ -209,15 +209,6 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 .octiv-competitor-table tbody td:first-child { text-align: left; width: 64%; }
 #content_editor .octiv-competitor-table tbody td:first-child, .pdf-page-content .octiv-competitor-table tbody td:first-child { border-left: 0; }
 #content_editor .octiv-competitor-table tbody td:last-child, .pdf-page-content .octiv-competitor-table tbody td:last-child { border-right: 0; }
-.octiv-feature-table { border-radius: 0 0 4px 4px; }
-#content_editor .octiv-feature-table, .pdf-page-content .octiv-feature-table { margin-bottom: 0; }
-.octiv-feature-table td:first-child { font-weight: bold; }
-#content_editor .octiv-feature-table td:first-child, .pdf-page-content .octiv-feature-table td:first-child { border-left: 0; }
-.octiv-feature-table td:last-child { border-right: 0; }
-#content_editor .octiv-feature-table tr:nth-child(2n) td, .pdf-page-content .octiv-feature-table tr:nth-child(2n) td { background-color: #f0f0f0; }
-#content_editor .octiv-feature-table tr:last-child td, .pdf-page-content .octiv-feature-table tr:last-child td { border-bottom: 0; }
-.octiv-feature-table tr:last-child td:first-child { border-radius: 0 0 0 4px; }
-.octiv-feature-table tr:last-child td:last-child { border-radius: 0 0 4px 0; }
 .octiv-number-list-brand-two { counter-reset: octiv-fancy-number-list; list-style-type: none; }
 .octiv-number-list-brand-two li { position: relative; }
 #content_editor .octiv-number-list-brand-two li, .pdf-page-content .octiv-number-list-brand-two li { padding-left: 1.25em; margin-bottom: 1em; }
@@ -323,11 +314,6 @@ body.view-login { background-image: url(https://mytinder.s3.amazonaws.com/assets
 #content_editor ul li, .pdf-page-content ul li, #content_editor ol li, .pdf-page-content ol li { font-size: 0.9em; line-height: 1.4 !important; font-weight: 300; }
 #content_editor hr, .pdf-page-content hr { margin-top: 1em; margin-bottom: 1em; border: 0; border-top: 1px solid #ccc; }
 #content_editor a:hover, .pdf-page-content a:hover { color: #fa7c45; }
-#content_editor table, .pdf-page-content table { margin-bottom: 1em; border: 0; background-color: #fff; color: #2d3943; }
-#content_editor table td, .pdf-page-content table td { padding: 0.5em; border-left: 1px solid #ccc; font-size: 0.9em !important; line-height: 1.4 !important; }
-#content_editor table td:last-child, .pdf-page-content table td:last-child { border-right: 1px solid #ccc; }
-#content_editor table tr:nth-child(2n) td, .pdf-page-content table tr:nth-child(2n) td { background-color: #fff; }
-#content_editor table tr:last-child td, .pdf-page-content table tr:last-child td { border-bottom: 1px solid #ccc; }
 #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 30px !important; }
 #content_editor .no-gutters .half:nth-child(2n-1), .pdf-page-content .no-gutters .half:nth-child(2n-1) { padding-left: 0 !important; }
 #content_editor .no-gutters .half:nth-child(2n), .pdf-page-content .no-gutters .half:nth-child(2n) { padding-right: 0 !important; }

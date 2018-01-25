@@ -81,32 +81,32 @@
   }
 }
 
-#content_editor table,
-.pdf-page-content table {
-  margin-bottom: 1em;
-  border: 0;
-  background-color: #fff;
-  color: $base-text-color;
+// #content_editor table,
+// .pdf-page-content table {
+//   margin-bottom: 1em;
+//   border: 0;
+//   background-color: #fff;
+//   color: $base-text-color;
   
-  td {
-    padding: 0.5em;
-    border-left: 1px solid $brand-gray;
-    font-size: 0.9em !important;
-    line-height: 1.4 !important;
-    &:last-child {
-      border-right: 1px solid $brand-gray;
-    }
-  }
+//   td {
+//     padding: 0.5em;
+//     border-left: 1px solid $brand-gray;
+//     font-size: 0.9em !important;
+//     line-height: 1.4 !important;
+//     &:last-child {
+//       border-right: 1px solid $brand-gray;
+//     }
+//   }
 
-  tr:nth-child(2n) td {
-    background-color: #fff;
-  }
+//   tr:nth-child(2n) td {
+//     background-color: #fff;
+//   }
 
-  tr:last-child td {
-    border-bottom: 1px solid $brand-gray;
-  }
+//   tr:last-child td {
+//     border-bottom: 1px solid $brand-gray;
+//   }
 
-}
+// }
 
 // GRID
 #content_editor .no-gutters .half,
