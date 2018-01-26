@@ -3,24 +3,13 @@
 // ===================
 
 #content_editor h1,
-.pdf-page-content h1,
-#content_editor h2,
-.pdf-page-content h2,
-#content_editor h3,
-.pdf-page-content h3,
-#content_editor h4,
-.pdf-page-content h4,
-#content_editor h5,
-.pdf-page-content h5,
-#content_editor h6,
-.pdf-page-content h6,
-#content_editor p,
-.pdf-page-content p {
+.pdf-page-content h1 {
   line-height: 1.4 !important;
 }
 
 #content_editor h2,
 .pdf-page-content h2 {
+  line-height: 1.4 !important;
   @include mobile {
     font-size: 1.3em !important;
   }
@@ -29,8 +18,14 @@
   }
 }
 
+#content_editor h3,
+.pdf-page-content h3 {
+  line-height: 1.4 !important;
+}
+
 #content_editor h4,
 .pdf-page-content h4 {
+  line-height: 1.4 !important;
   @include mobile {
     font-size: 1.15em !important;
   }
@@ -39,8 +34,19 @@
   }
 }
 
+#content_editor h5,
+.pdf-page-content h5 {
+  line-height: 1.4 !important;
+}
+
+#content_editor h6,
+.pdf-page-content h6 {
+  line-height: 1.4 !important;
+}
+
 #content_editor p,
 .pdf-page-content p {
+  line-height: 1.4 !important;  
   margin-bottom: 1em !important;
   @include print {
     font-size: 0.9em !important;
@@ -81,32 +87,32 @@
   }
 }
 
-// #content_editor table,
-// .pdf-page-content table {
-//   margin-bottom: 1em;
-//   border: 0;
-//   background-color: #fff;
-//   color: $base-text-color;
+#content_editor table,
+.pdf-page-content table {
+  margin-bottom: 1em;
+  border: 0;
+  background-color: #fff;
+  color: $base-text-color;
   
-//   td {
-//     padding: 0.5em;
-//     border-left: 1px solid $brand-gray;
-//     font-size: 0.9em !important;
-//     line-height: 1.4 !important;
-//     &:last-child {
-//       border-right: 1px solid $brand-gray;
-//     }
-//   }
+  td {
+    padding: 0.5em;
+    border-left: 1px solid $brand-gray;
+    font-size: 0.9em !important;
+    line-height: 1.4 !important;
+    &:last-child {
+      border-right: 1px solid $brand-gray;
+    }
+  }
 
-//   tr:nth-child(2n) td {
-//     background-color: #fff;
-//   }
+  tr:nth-child(2n) td {
+    background-color: #fff;
+  }
 
-//   tr:last-child td {
-//     border-bottom: 1px solid $brand-gray;
-//   }
+  tr:last-child td {
+    border-bottom: 1px solid $brand-gray;
+  }
 
-// }
+}
 
 // GRID
 #content_editor .no-gutters .half,

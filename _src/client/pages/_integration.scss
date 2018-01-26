@@ -28,6 +28,7 @@
       &:first-child {
         .octiv-integration-logo-wrap {
           right: 1.5em;
+          padding: 1.5em 0;
           @include print {
             right: 0in;
           }
