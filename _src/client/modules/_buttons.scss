@@ -1,3 +1,18 @@
+@mixin octiv-button($color) {
+  background-color: $color;  
+  color: #fff !important;
+  padding: 0.75em 1em;
+  border-radius: 4px;
+  transition: all 250ms ease-in-out;
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+}
+
+.octiv-button--brand {
+  @include octiv-button($brand);
+}
+
 .octiv-btn-arrow {
   position: relative;
   text-decoration: none !important;

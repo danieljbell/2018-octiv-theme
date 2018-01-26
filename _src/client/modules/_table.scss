@@ -1,43 +1,46 @@
+.octiv-product-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  @include print {
+    font-size: 0.8em;
+  }
+
+  .integer {
+    display: inline-block;
+    margin-right: 0.25em;
+  }
+
+}
+
+.octiv-product-details {
+  #content_editor &,
+  .pdf-page-content & {
+    font-style: italic;
+    @include print {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.octiv-product-description {
+  #content_editor &,
+  .pdf-page-content & {
+    font-size: 1em;
+    line-height: 1.4;
+    color: lighten($base-text-color, 20%);
+    margin-bottom: 0 !important;
+    @include print {
+      font-size: 0.8;
+    }
+  }
+}
+
 .custom_pricing {
 
   td {
     #content_editor &,
     .pdf-page-content & {
       padding: 0.85em 0.5em;
-    }
-  }
-
-  .octiv-product-name {
-    font-weight: bold;
-    font-size: 1.2em;
-    @include print {
-      font-size: 0.8em;
-    }
-
-    .integer {
-      display: inline-block;
-      margin-right: 0.25em;
-    }
-
-  }
-
-  .octiv-product-details {
-    font-style: italic;
-    @include print {
-      font-size: 0.8em;
-    }
-  }
-
-  .octiv-product-description {
-    #content_editor &,
-    .pdf-page-content & {
-      font-size: 1em;
-      line-height: 1.4;
-      color: lighten($base-text-color, 20%);
-      margin-bottom: 0 !important;
-      @include print {
-        font-size: 0.8;
-      }
     }
   }
 
