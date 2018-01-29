@@ -7,15 +7,18 @@
 // ===========
 // TYPOGRAPHY
 // ===========
-.octiv-has-text-white {
+#content_editor .octiv-has-text-white,
+.pdf-page-content .octiv-has-text-white {
   color: #fff !important;
 }
 
-.octiv-has-text-brand-two {
+#content_editor .octiv-has-text-brand-two,
+.pdf-page-content .octiv-has-text-brand-two {
   color: $brand-two !important;
 }
 
-.octiv-has-text-center {
+#content_editor .octiv-has-text-center,
+.pdf-page-content .octiv-has-text-center {
   text-align: center !important;
 }
 
@@ -23,7 +26,8 @@
 // ========
 // SPACING
 // ========
-.octiv-pad-y {
+#content_editor .octiv-pad-y,
+.pdf-page-content .octiv-pad-y {
   padding-top: 30px !important;
   padding-bottom: 30px !important;
   &-more {
@@ -32,21 +36,24 @@
   }
 }
 
-.octiv-pad-t {
+#content_editor .octiv-pad-t,
+.pdf-page-content .octiv-pad-t {
   padding-top: 30px !important;
   &-more {
     padding-top: 60px !important;
   }
 }
 
-.octiv-pad-b {
+#content_editor .octiv-pad-b,
+.pdf-page-content .octiv-pad-b {
   padding-bottom: 30px !important;
   &-more {
     padding-bottom: 60px !important;
   }
 }
 
-.octiv-pad-x {
+#content_editor .octiv-pad-x,
+.pdf-page-content .octiv-pad-x {
   padding-left: 30px !important;
   padding-right: 30px !important;
   &-more {
@@ -55,21 +62,24 @@
   }
 }
 
-.octiv-pad-l {
+#content_editor .octiv-pad-l,
+.pdf-page-content .octiv-pad-l {
   padding-left: 30px !important;
   &-more {
     padding-left: 60px !important;
   }
 }
 
-.octiv-pad-r {
+#content_editor .octiv-pad-r,
+.pdf-page-content .octiv-pad-r {
   padding-right: 30px !important;
   &-more {
     padding-right: 60px !important;
   }
 }
 
-.octiv-mar-y {
+#content_editor .octiv-mar-y,
+.pdf-page-content .octiv-mar-y {
   margin-top: 30px !important;
   margin-bottom: 30px !important;
   &-more {
@@ -78,7 +88,8 @@
   }
 }
 
-.octiv-mar-t {
+#content_editor .octiv-mar-t,
+.pdf-page-content .octiv-mar-t {
   margin-top: 30px !important;
   &-more {
     margin-top: 60px !important;
@@ -88,7 +99,8 @@
   }
 }
 
-.octiv-mar-b {
+#content_editor .octiv-mar-b,
+.pdf-page-content .octiv-mar-b {
   margin-bottom: 30px !important;
   &-more {
     margin-bottom: 60px !important;
@@ -96,9 +108,13 @@
   &-neg {
     margin-bottom: -30px !important;
   }
+  &-none {
+    margin-bottom: 0px !important;
+  }
 }
 
-.octiv-mar-x {
+#content_editor .octiv-mar-x,
+.pdf-page-content .octiv-mar-x {
   margin-left: 30px !important;
   margin-right: 30px !important;
   &-more {
@@ -107,21 +123,24 @@
   }
 }
 
-.octiv-mar-l {
+#content_editor .octiv-mar-l,
+.pdf-page-content .octiv-mar-l {
   margin-left: 30px !important;
   &-more {
     margin-left: 60px !important;
   }
 }
 
-.octiv-mar-r {
+#content_editor .octiv-mar-r,
+.pdf-page-content .octiv-mar-r {
   margin-right: 30px !important;
   &-more {
     margin-right: 60px !important;
   }
 }
 
-.octiv-b-a {
+#content_editor .octiv-b-a,
+.pdf-page-content .octiv-b-a {
   border: 1px solid #fff;
 }
 
@@ -129,12 +148,14 @@
 // ===========================
 // RESPONSIVE VIDEO CONTAINERS
 // ===========================
-.octiv-video-outer {
+#content_editor .octiv-video-outer,
+.pdf-page-content .octiv-video-outer {
   padding: 56.25% 0 0 0;
   position: relative;
 }
 
-.octiv-video-inner {
+#content_editor .octiv-video-inner,
+.pdf-page-content .octiv-video-inner {
   height: 100%;
   left: 0;
   position: absolute;
