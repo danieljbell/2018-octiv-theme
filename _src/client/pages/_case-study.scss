@@ -11,6 +11,10 @@
     max-width: 150px;
     max-height: 100px;
     margin-bottom: 1em;
+    @include print {
+      max-width: 3in;
+      max-height: 1in;
+    }
   }
 
   .octiv-icon-item {

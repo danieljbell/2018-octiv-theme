@@ -89,6 +89,7 @@
 
 #content_editor table,
 .pdf-page-content table {
+  width: 100%;
   margin-bottom: 1em;
   border: 0;
   background-color: #fff;
@@ -130,6 +131,11 @@
     border-bottom: 1px solid $brand-gray;
   }
 
+}
+
+#content_editor section,
+.pdf-page-content section {
+  page-break-inside: avoid;
 }
 
 // GRID

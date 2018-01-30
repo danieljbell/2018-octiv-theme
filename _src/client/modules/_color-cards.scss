@@ -116,6 +116,11 @@
 
 .octiv-color-card-brand {
   @include octiv-color-card($brand);
+  .octiv-datasheet-key-capabilities & {
+    @include print {
+      max-width: 100% !important;
+    } 
+  }
 }
 
 .octiv-color-card-brand-two {

@@ -1,0 +1,62 @@
+@keyframes octivPulse {
+  from {
+    transform: translate(-50%,-50%) scale(1.25);
+  }
+  to {
+    transform: translate(-50%,-50%) scale(1.4);
+  }
+}
+
+@keyframes integrationOne {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-200%, -125%);
+  }
+}
+
+@keyframes integrationTwo {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -200%);
+  }
+}
+
+@keyframes integrationThree {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(100%, -125%);
+  }
+}
+
+@keyframes integrationFour {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(100%, 25%);
+  }
+}
+
+@keyframes integrationFive {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, 100%);
+  }
+}
+
+@keyframes integrationSix {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-200%, 25%);
+  }
+}
