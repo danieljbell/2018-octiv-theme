@@ -1,0 +1,43 @@
+.octiv-support-services .octiv-icon-item {
+  text-align: left;
+  text-align: left;
+  display: table;
+  width: 100%;
+  margin-bottom: 2em;
+  @include mobile {
+    display: block;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+.octiv-support-services .octiv-icon-content-container {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 1em;
+    width: 100%;
+    @include mobile {
+      padding-left: 0;
+    }
+
+    #content_editor & h4,
+    .pdf-page-content & h4 {
+      font-size: $heading-four-font-size !important;
+      line-height: 1.3 !important;
+    }
+
+    #content_editor & p,
+    .pdf-page-content & p {
+      font-size: 1em !important;
+      line-height: 1.3 !important;
+      color: $base-text-color;
+      // margin-bottom: 0 !important;
+      @include print {
+        font-size: 0.9em !important;
+      }
+    }
+
+  }
