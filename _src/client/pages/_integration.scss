@@ -109,3 +109,26 @@
   }
 
 }
+
+.octiv-integration--salesforce-cpq {
+  page: octiv-integration--salesforce-cpq;
+}
+
+@page octiv-integration--salesforce-cpq {
+  margin-bottom: -0.5in;
+}
+
+.octiv-integration--oracle-cpq {
+  page: octiv-integration--oracle-cpq;
+
+  .octiv-why-integration,
+  .octiv-integration-capabilities {
+    @include print {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+@page octiv-integration--oracle-cpq {
+  margin-bottom: -0.5in;
+}

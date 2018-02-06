@@ -94,3 +94,34 @@
 .octiv-icon-list ul {
   list-style-type: disc;
 }
+
+.octiv-icon-content--heading-container {
+  display: table;
+  width: 100%;
+  border-bottom: 1px solid $brand-gray;
+  @include mobile {
+    display: block;
+    border-bottom: 0;
+  }
+
+  h4,
+  h5 {
+    display: table-cell;
+    @include mobile {
+      display: block;
+    }
+  }
+  
+  h5 {
+    text-align: right;
+    #content_editor &,
+    .pdf-page-content & {
+      color: $brand !important;
+      font-weight: normal;
+    }
+    @include mobile {
+      text-align: left;
+    }
+  }
+
+}
