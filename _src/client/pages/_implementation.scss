@@ -1,0 +1,17 @@
+.octiv-implementation [class*="octiv-color-card-brand"] {
+  @include print {
+    max-width: none;
+  }
+}
+
+.octiv-implementation [class*="octiv-color-card-brand"] * {
+  padding: 0.5em 0.5em 0;
+}
+
+.octiv-implementation [class*="octiv-color-card-brand"] h6 {
+  padding: 0.25em 0.5em;
+}
+
+.octiv-implementation [class*="octiv-color-card-brand"] span {
+  padding: 0;
+}

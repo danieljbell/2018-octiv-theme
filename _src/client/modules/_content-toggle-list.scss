@@ -90,3 +90,56 @@
     visibility: hidden;
   }
 }
+
+.octiv-content-toggle-list--implementation {
+  display: table;
+  width: 100%;
+  min-height: 10em;
+  @include print {
+    display: block;
+    min-height: none;
+  }
+}
+
+.octiv-content-toggle-list--implementation .octiv-content-toggle-item {
+  display: table-cell; 
+  text-align: center;
+  @include mobile {
+    display: block;
+  }
+  @include print {
+    display: block;
+    width: 100% !important;
+  }
+}
+
+.octiv-content-toggle-list--implementation .octiv-slide-content {
+  top: 5em;
+  left: 0;
+  text-align: left;
+  @include print {
+    position: static;
+    display: block;
+    top: 0;
+  }
+}
+
+.octiv-content-toggle-list--implementation label {
+  position: relative;
+  display: block;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 5px dotted $brand-gray;
+    height: 1px;
+    width: 100%;
+  }
+
+}
+
+.octiv-content-toggle-list--implementation .octiv-content-toggle-item:last-child label:after {
+  display: none;
+}
