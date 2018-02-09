@@ -22,6 +22,14 @@
   text-align: center !important;
 }
 
+#content_editor .octiv-has-font-bump,
+.pdf-page-content .octiv-has-font-bump,
+#content_editor .octiv-has-font-bump *,
+.pdf-page-content .octiv-has-font-bump * {
+  font-size: 1.15em !important;
+  line-height: 1.4 !important;
+}
+
 
 // ========
 // SPACING

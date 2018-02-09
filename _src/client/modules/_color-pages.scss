@@ -1,0 +1,43 @@
+@mixin octiv-color-page($bgc) {
+  background-color: $bgc;
+  position: relative;
+  left: -30px;
+  top: -20px;
+  width: calc(100% + 60px);
+  margin-bottom: -20px;
+  padding: 30px;
+  @include print {
+    top: -0.5in;
+    left: -0.5in;
+    padding: 0.5in;
+    width: 8.5in;
+    min-height: 11in;
+  }
+  
+  #content_editor & [class*="octiv-color-box-headline"],
+  .pdf-page-content & [class*="octiv-color-box-headline"] {
+    color: $bgc !important;
+  }
+  
+  #content_editor & *,
+  .pdf-page-content & * {
+    color: #fff;
+  }
+
+}
+
+.octiv-color-page--brand-two {
+  @include octiv-color-page($brand-two);
+}
+
+.octiv-color-page--brand-three {
+  @include octiv-color-page($brand-three);
+}
+
+.octiv-color-page--brand-four {
+  @include octiv-color-page($brand-four);
+}
+
+.octiv-color-page--brand-five {
+  @include octiv-color-page($brand-five);
+}

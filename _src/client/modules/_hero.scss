@@ -7,11 +7,16 @@
   left: -30px;
   top: -20px;
   width: calc(100% + 60px);
-  padding: 45px 100px;
   text-align: center;
+  #content_editor &,
+  .pdf-page-content & {
+    padding: 45px 100px !important;
+  }
   @include mobile {
-    padding-left: 30px;
-    padding-right: 30px;
+    #content_editor & {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
   }
   @include print {
     top: -0.5in;

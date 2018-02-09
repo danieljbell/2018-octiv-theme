@@ -1,10 +1,10 @@
-@mixin octiv-color-box-headline($color) {
-  background-color: $color;
+@mixin octiv-color-box-headline($bgc, $tc: #fff) {
+  background-color: $bgc;
   border-radius: 4px;
   display: inline-block;
   #content_editor &,
   .pdf-page-content & {
-    color: #fff !important;
+    color: $tc !important;
     font-weight: bold !important;
     line-height: 1 !important;
     padding: 0.25em 0.5em;
@@ -20,6 +20,10 @@
     color: #fff;
   }
 
+}
+
+.octiv-color-box-headline--white {
+  @include octiv-color-box-headline(#fff);
 }
 
 .octiv-color-box-headline--brand-two {

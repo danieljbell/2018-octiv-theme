@@ -31,7 +31,7 @@
   }
 
   .octiv-advantages {
-    margin-top: 45px;
+    margin-top: 45px; 
   }
 
   .octiv-icon-item {
@@ -143,11 +143,15 @@
 
   .octiv-competitor-capabilities {
     margin-top: 60px;
+    page-break-inside: avoid;
     
     .octiv-competitor-table-key {
       list-style-type: none;
       display: table;
       margin: 0 auto !important;
+      @include print {
+        margin-bottom: 1em !important;
+      }
       
       #content_editor &,
       .pdf-page-content & {

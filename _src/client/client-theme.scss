@@ -11,6 +11,12 @@ GITHUB REPO: https://github.com/danieljbell/2018-octiv-theme
 body.view-login {
   background-image: url(https://mytinder.s3.amazonaws.com/assets/themes/8028/background_original.jpg?1516293993);
 }
+body.content #content_editor {
+  padding: 20px 30px !important;
+}
+body.content #content_editor section {
+  padding: 0;
+}
 /* END MAINFRAME HACKS */
 
 @import './modules/hero';
@@ -31,6 +37,7 @@ body.view-login {
 @import './modules/number-list';
 @import './modules/footnote';
 @import './modules/dots';
+@import './modules/color-pages';
 
 @import './pages/intro-letter';
 @import './pages/case-study';
