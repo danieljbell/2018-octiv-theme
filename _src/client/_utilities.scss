@@ -115,6 +115,9 @@
   margin-bottom: 30px !important;
   &-more {
     margin-bottom: 60px !important;
+    @include print {
+      margin-bottom: 0.25in !important;
+    }
   }
   &-neg {
     margin-bottom: -30px !important;
