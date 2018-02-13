@@ -1,123 +1,129 @@
 ---
 ---
+<p style="display: none;">{{Opportunity_Owner_Headshot_Image_URL__c}}</p>
 <div class="octiv-order-form">
-  <section class="octiv-hero" style="background-image: url('https://mytinder.s3.amazonaws.com/assets/medias/589376_original.jpg?1516293546');">
+  <section class="octiv-hero octiv-hero-no-subheadline" style="background-image: url('https://mytinder.s3.amazonaws.com/assets/medias/589376_original.jpg?1516293546');">
     <div class="octiv-color-boxes">
       <h1 class="octiv-color-box-headline--brand-two">Order Form</h1>
     </div>
-    <p>Let's get down to business, my friend ;)</p>
   </section>
   <section>
     <div class="grid no-gutters">
       <div class="unit half">
         <ul class="octiv-order-form-details-list">
-          <li><strong>Company Name:<br /></strong>{{Opportunity_Account_Name}}</li>
-          <li data-hide-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date__c IS BLANK"><strong>Contract Start Date:<br /></strong>{{Opportunity_Contract_Start_Date_text__c}}</li>
-          <li data-hide-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date__c IS BLANK"><strong>Contract End Date:<br /></strong>{{Opportunity_Contract_End_Date_text__c}}</li>
-          <li data-hide-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date__c IS BLANK"><strong>Contract Term:<br /></strong>{{opportunity_term_months__c.to_i}} Months</li>
-          <li><strong>Billing Frequency:<br /></strong>{{Opportunity_Billing_Term__c}}</li>
-          <li><strong>Billing Method:<br /></strong>{{Opportunity_Billing_Method__c}}</li>
+          <li><strong>Company Name:</strong><br />{{Opportunity_Account_Name}}</li>
+          <li data-hide-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date__c IS BLANK"><strong>Contract Start Date:</strong><br />{{Opportunity_Contract_Start_Date_text__c}}</li>
+          <li data-hide-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date__c IS BLANK"><strong>Contract End Date:</strong><br />{{Opportunity_Contract_End_Date_text__c}}</li>
+          <li data-hide-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date__c IS BLANK"><strong>Contract Term:</strong><br />{{opportunity_term_months__c.to_i}} Months</li>
+          <li><strong>Billing Frequency:</strong><br />{{Opportunity_Billing_Term__c}}</li>
+          <li><strong>Billing Method:</strong><br />{{Opportunity_Billing_Method__c}}</li>
           <li data-show-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date_text__c IS BLANK">This Order Form will be effective upon acceptance for a period of <span>{{opportunity_term_months__c.to_i}}</span> months.</li>
         </ul>
         <hr />
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iste rerum, autem sunt hic unde inventore in velit. Atque dolor velit, ipsa ullam vero numquam cum, quae totam explicabo eum saepe sequi excepturi molestias similique.</p>
+        <p>Thank you for giving me the opportunity to offer you Octiv&rsquo;s exceptional products &amp; services. I am certain {{Opportunity_Account_Name}} will benefit from this new partnership. If you have any questions about this Order Form, please don't hesitate to contact me immediately.</p>
         <div class="octiv-employee-feature">
-          <div class="octiv-employee-feature-headshot"><img src="https://mytinder.s3.amazonaws.com/assets/medias/589358_original.jpg?1516293544" alt="" /></div>
+          <div class="octiv-employee-feature-headshot"><img src="{{Opportunity_Owner_Headshot_Image_URL__c}}" alt="" /></div>
           <div class="octiv-employee-feature-content">
-            <h3 class="octiv-employee-feature-name">Adam Becker</h3>
-            <p class="octiv-employee-feature-title">Sr. Director Account Management</p>
+            <h3 class="octiv-employee-feature-name">{{Opportunity_Owner_Name}}</h3>
+            <p class="octiv-employee-feature-title">{{Opportunity_Owner_Title}}</p>
           </div>
         </div>
         <hr />
         <ol class="octiv-footnote">
-          <li><span data-show-if="Opportunity_Type != 'Upsell'">This Order Form is accepted pursuant to and shall be governed by the document setting forth the legal terms and conditions for use of the Octiv Services (the "<strong>Agreement</strong>") as found on the page titled "Payment &amp; Terms," to be considered agreed upon by Octiv, Inc. ("<strong>Octiv</strong>") and the undersigned Customer upon Customer's acceptance of this document. This Order Form shall be null and void if an Agreement has not been executed. </span><span data-show-if="Opportunity_Type == 'Upsell'">This Order Form is accepted pursuant to and shall be governed by the document setting forth the legal terms and conditions for use of the Octiv&nbsp;Services (the "<strong>Agreement</strong>") as previously agreed upon by Octiv&nbsp;Inc. ("<strong>Octiv</strong>") and the undersigned Customer. This Order Form shall be null and void if an Agreement has not been executed. </span></li>
+          <li>
+            <span data-show-if="Opportunity_Type NLIKE 'Upsell'">This Order Form is accepted pursuant to and shall be governed by the document setting forth the legal terms and conditions for use of the Octiv Services (the "<strong>Agreement</strong>") as found on the page titled "Payment &amp; Terms," to be considered agreed upon by Octiv, Inc. ("<strong>Octiv</strong>") and the undersigned Customer upon Customer's acceptance of this document. This Order Form shall be null and void if an Agreement has not been executed.</span>
+            <span data-show-if="Opportunity_Type LIKE 'Upsell'">This Order Form is accepted pursuant to and shall be governed by the document setting forth the legal terms and conditions for use of the Octiv&nbsp;Services (the "<strong>Agreement</strong>") as previously agreed upon by Octiv&nbsp;Inc. ("<strong>Octiv</strong>") and the undersigned Customer. This Order Form shall be null and void if an Agreement has not been executed.</span>
+          </li>
           <li>This proposal was professionally designed by our creative services team. Please reach out to your sales representative if you are interested in learning more.</li>
         </ol>
       </div>
       <div class="unit half">
-        <ul class="octiv-color-cards">
-          <li class="octiv-color-card-brand-two">
-            <h6>Subscriptions<span>Annual Total</span></h6>
-            <table>
-              <tbody>
-                <tr>
-                  <td><strong>[Quantity] [Product Name]</strong>
-                    <div class="octiv-product-details">[Unit Price]/user/month</div>
-                    <p class="octiv-product-description">[Description]</p>
-                  </td>
-                  <td>[ARR]</td>
-                </tr>
-                <tr>
-                  <td><strong>[Quantity] [Product Name]</strong>
-                    <div class="octiv-product-details">[Unit Price]/user/month</div>
-                    <p class="octiv-product-description">[Description]</p>
-                  </td>
-                  <td>[ARR]</td>
-                </tr>
-                <tr>
-                  <td><strong>[Quantity] [Product Name]</strong>
-                    <div class="octiv-product-details">[Unit Price]/user/month
-                      <p class="octiv-product-description">[Description]</p>
-                    </div>
-                  </td>
-                  <td>[ARR]</td>
-                </tr>
-              </tbody>
-              <tfoot>
-              <tr>
-                <td><strong>Annual Subscription Investment:</strong></td>
-                <td>[Opportunity ARR]</td>
-              </tr>
-              </tfoot>
-            </table>
-          </li>
-          <li class="octiv-color-card-brand-three">
-            <h6>One-Time Services<span>Annual Total</span></h6>
-            <table>
-              <tbody>
-                <tr>
-                  <td><strong>[Quantity] Hour[s] of [Product Name]</strong>
-                    <div class="octiv-product-details">
-                      <p class="octiv-product-description">[Description]</p>
-                    </div>
-                  </td>
-                  <td>[Total Price]</td>
-                </tr>
-              </tbody>
-              <tfoot>
-              <tr>
-                <td><strong>One-Time Services Investment:</strong></td>
-                <td class="money"><strong>[Opportunity Total Services]</strong></td>
-              </tr>
-              </tfoot>
-            </table>
-          </li>
-          <li class="octiv-color-card-brand">
-            <h6>Totals<span>Annual Total</span></h6>
-            <table>
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="octiv-product-name">Annual Subscription Investment:</div>
-                  </td>
-                  <td class="money">[Opportunity ARR]</td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="octiv-product-name">One-Time Services Investment:</div>
-                  </td>
-                  <td class="money">[Opportunity Total Services]</td>
-                </tr>
-              </tbody>
-              <tfoot>
-              <tr>
-                <td><strong>Total Contract Investment:</strong></td>
-                <td class="money"><strong>[Opportunity Amount]</strong></td>
-              </tr>
-              </tfoot>
-            </table>
-          </li>
-        </ul>
+        <table class="octiv-brand-two-table">
+          <thead>
+            <tr>
+              <th>Subscriptions</th>
+              <th>Annual Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Quantity Product Name</strong>
+                <div class="octiv-product-details">Unit Price/user/month</div>
+                <p class="octiv-product-description">Description</p>
+              </td>
+              <td>$ARR</td>
+            </tr>
+            <tr>
+              <td><strong>Quantity Product Name</strong>
+                <div class="octiv-product-details">Unit Price/user/month</div>
+                <p class="octiv-product-description">Description</p>
+              </td>
+              <td>$ARR</td>
+            </tr>
+            <tr>
+              <td><strong>Quantity Product Name</strong>
+                <div class="octiv-product-details">Unit Price/user/month
+                  <p class="octiv-product-description">Description</p>
+                </div>
+              </td>
+              <td>$ARR</td>
+            </tr>
+          </tbody>
+          <tfoot>
+          <tr>
+            <td><strong>Annual Subscription Investment:</strong></td>
+            <td>$Opportunity ARR</td>
+          </tr>
+          </tfoot>
+        </table>
+        <table class="octiv-brand-three-table">
+          <thead>
+            <tr>
+              <th>One-Time Services</th>
+              <th>Annual Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Quantity Hours of Implementation Package</strong>
+                <div class="octiv-product-details">
+                  <p class="octiv-product-description">Description</p>
+                </div>
+              </td>
+              <td>$Price</td>
+            </tr>
+          </tbody>
+          <tfoot>
+          <tr>
+            <td><strong>One-Time Services Investment:</strong></td>
+            <td class="money"><strong>$Opportunity Total Services</strong></td>
+          </tr>
+          </tfoot>
+        </table>
+        <table class="octiv-brand-table">
+          <thead>
+            <tr>
+              <th>Totals</th>
+              <th>Annual Total</th>
+            </tr>
+          </thead>              
+          <tbody>
+            <tr>
+              <td><strong>Annual Subscription Investment:</strong></td>
+              <td class="money">$Opportunity ARR</td>
+            </tr>
+            <tr>
+              <td><strong>One-Time Services Investment:</strong></td>
+              <td class="money">$Opportunity Total Services</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><strong>Total Contract Investment:</strong></td>
+              <td class="money"><strong>$Opportunity Amount</strong></td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
     </div>
   </section>

@@ -1,140 +1,134 @@
 ---
 ---
+<p style="display: none;">{{Opportunity_Owner_Headshot_Image_URL__c}}</p>
 <div class="octiv-order-form">
-  <section class="octiv-hero" style="background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589376_original.jpg?1516293546);">
+  <section class="octiv-hero octiv-hero-no-subheadline" style="background-image: url('https://mytinder.s3.amazonaws.com/assets/medias/589376_original.jpg?1516293546');">
     <div class="octiv-color-boxes">
       <h1 class="octiv-color-box-headline--brand-two">Order Form</h1>
     </div>
-    <p>Let's get down to business, my friend ;)</p>
   </section>
   <section>
     <div class="grid no-gutters">
       <div class="unit half">
         <ul class="octiv-order-form-details-list">
-          <li><strong>Company Name:</strong><br>{{proposal_client}}</li>
-          <li><strong>Contract Start Date:</strong><br>{{Opportunity_Contract_Start_Date_text__c}}</li>
-          <li><strong>Contract End Date:</strong><br>{{Opportunity_Contract_End_Date_text__c}}</li>
-          <li><strong>Contract Term:</strong><br>{{opportunity_term_months__c.to_i}} Months</li>
-          <li><strong>Billing Frequency:</strong><br>{{Opportunity_Billing_Term__c}}</li>
-          <li><strong>Billing Method:</strong><br>{{Opportunity_Billing_Method__c}}</li>
+          <li><strong>Company Name:</strong><br />{{Opportunity_Account_Name}}</li>
+          <li data-hide-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date__c IS BLANK"><strong>Contract Start Date:</strong><br />{{Opportunity_Contract_Start_Date_text__c}}</li>
+          <li data-hide-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date__c IS BLANK"><strong>Contract End Date:</strong><br />{{Opportunity_Contract_End_Date_text__c}}</li>
+          <li data-hide-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date__c IS BLANK"><strong>Contract Term:</strong><br />{{opportunity_term_months__c.to_i}} Months</li>
+          <li><strong>Billing Frequency:</strong><br />{{Opportunity_Billing_Term__c}}</li>
+          <li><strong>Billing Method:</strong><br />{{Opportunity_Billing_Method__c}}</li>
+          <li data-show-if="Opportunity_Contract_Start_Date_text__c IS BLANK OR Opportunity_Contract_End_Date_text__c IS BLANK">This Order Form will be effective upon acceptance for a period of <span>{{opportunity_term_months__c.to_i}}</span> months.</li>
         </ul>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iste rerum, autem sunt hic unde inventore in velit. Atque dolor velit, ipsa ullam vero numquam cum, quae totam explicabo eum saepe sequi excepturi molestias similique.</p>
+        <hr />
+        <p>Thank you for giving me the opportunity to offer you Octiv's exceptional products &amp; services. I am certain {{Opportunity_Account_Name}} will benefit from this new partnership. If you have any questions about this Order Form, please don't hesitate to contact me immediately.</p>
         <div class="octiv-employee-feature">
-          <div class="octiv-employee-feature-headshot">
-            <img src="https://mytinder.s3.amazonaws.com/assets/medias/589358_original.jpg?1516293544" alt="">
-          </div>
+          <div class="octiv-employee-feature-headshot"><img src="{{Opportunity_Owner_Headshot_Image_URL__c}}" alt="" /></div>
           <div class="octiv-employee-feature-content">
-            <h3 class="octiv-employee-feature-name">Adam Becker</h3>
-            <p class="octiv-employee-feature-title">Sr. Director Account Management</p>
+            <h3 class="octiv-employee-feature-name">{{Opportunity_Owner_Name}}</h3>
+            <p class="octiv-employee-feature-title">{{Opportunity_Owner_Title}}</p>
           </div>
-        </div>    
-        <hr>
+        </div>
+        <hr />
         <ol class="octiv-footnote">
-          <li>This Order Form is accepted pursuant to and shall be governed by the document setting forth the legal terms and conditions for use of the Octiv Services (the “Agreement”) as found on the page titled “Payment &amp; Terms,” to be considered agreed upon by Octiv, Inc. (“Octiv”) and the undersigned Customer upon Customer’s acceptance of this document. This Order Form shall be null and void if an Agreement has not been executed.</li>
+          <li>
+            <span data-show-if="Opportunity_Type NLIKE 'Upsell'">This Order Form is accepted pursuant to and shall be governed by the document setting forth the legal terms and conditions for use of the Octiv Services (the "<strong>Agreement</strong>") as found on the page titled "Payment &amp; Terms," to be considered agreed upon by Octiv, Inc. ("<strong>Octiv</strong>") and the undersigned Customer upon Customer's acceptance of this document. This Order Form shall be null and void if an Agreement has not been executed.</span>
+            <span data-show-if="Opportunity_Type LIKE 'Upsell'">This Order Form is accepted pursuant to and shall be governed by the document setting forth the legal terms and conditions for use of the Octiv&nbsp;Services (the "<strong>Agreement</strong>") as previously agreed upon by Octiv&nbsp;Inc. ("<strong>Octiv</strong>") and the undersigned Customer. This Order Form shall be null and void if an Agreement has not been executed. </span>
+          </li>
           <li>This proposal was professionally designed by our creative services team. Please reach out to your sales representative if you are interested in learning more.</li>
         </ol>
       </div>
       <div class="unit half">
-        <ul class="octiv-color-cards">
-          <li class="octiv-color-card-brand-two">
-            <h6>Subscriptions<span>Annual Total</span></h6>
-            <table class="custom_pricing" data-filter="PricebookEntry.Product2.Family LIKE 'Subscription'" data-sort="PricebookEntry.Product2.ProductCode" data-source="OpportunityLineItems">
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="octiv-product-name">
-                      <span class="integer" data-show-if="PricebookEntry.Product2.Name LIKE 'User' OR PricebookEntry.Product2.Name LIKE 'for Octiv' OR PricebookEntry.Product2.Name LIKE 'Sandbox'">[Quantity]</span>
-                      <span>[PricebookEntry.Product2.Name]</span>
-                    </div>
-                    <div class="octiv-product-details">
-                      <span data-show-if="PricebookEntry.Product2.Family != 'Subscription Features'">
-                        <span class="money">[Unit_Price__c]</span>
-                        <span data-show-if="PricebookEntry.Product2.Name LIKE 'User' OR PricebookEntry.Product2.Name LIKE 'for Octiv'">/user</span>
-                        /month
-                      </span>
-                      <p class="octiv-product-description" data-show-if="Description IS NOT BLANK">[Description]</p>
-                    </div>
-                  </td>
-                  <td class="money">
-                    <span data-show-if="PricebookEntry.Product2.Family != 'Subscription Features'">[ARR__c]</span><span data-show-if="PricebookEntry.Product2.Family = 'Subscription Features'"><em>Included&nbsp;</em></span>
-                  </td>
-                </tr>
-              </tbody>
-              <tfoot>
-              <tr>
-                <td><strong>Annual Subscription Investment:</strong></td>
-                <td class="money"><strong><span>{{number_to_currency(opportunity_arr__c)}}</span><br /></strong></td>
-              </tr>
-              </tfoot>
-            </table>
-          </li>
-          <li class="octiv-color-card-brand-three">
-            <h6>One-Time Services<span>Annual Total</span></h6>
-            <table class="custom_pricing" data-filter="PricebookEntry.Product2.Family NLIKE 'Subscription'" data-sort="PricebookEntry.Product2.ProductCode" data-source="OpportunityLineItems">
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="octiv-product-name">
-                      <span data-show-if="PricebookEntry.Product2.Family != 'Professional Services">
-                        <span class="integer">[Quantity]</span>Hour<span data-show-if="Quantity &gt; '1'">s </span>of
-                      </span>
-                      [PricebookEntry.Product2.Name]
-                      <span data-show-if="PricebookEntry.Product2.Family = 'Professional Services">Package</span>
-                    </div>
-                    <div class="octiv-product-details">
-                      <p class="octiv-product-description" data-show-if="Description IS NOT BLANK">[Description]</p>
-                    </div>
-                  </td>
-                  <td class="money">[TotalPrice]</td>
-                </tr>
-              </tbody>
-              <tfoot>
-              <tr>
-                <td><strong>One-Time Services Investment:</strong></td>
-                <td class="money"><strong>{{number_to_currency(opportunity_total_services__c)}}</strong></td>
-              </tr>
-              </tfoot>
-            </table>
-          </li>
-          <li class="octiv-color-card-brand">
-            <h6>Totals<span>Annual Total</span></h6>
-            <table class="custom_pricing" data-filter="PricebookEntry.Product2.Family NLIKE 'Subscription'" data-sort="PricebookEntry.Product2.ProductCode" data-source="OpportunityLineItems">
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="octiv-product-name">Annual Subscription Investment:</div>
-                  </td>
-                  <td class="money">{{number_to_currency(opportunity_arr__c)}}</td>
-                </tr>
-                <tr>
-                  <td><div class="octiv-product-name">One-Time Services Investment:</div></td>
-                  <td class="money">{{number_to_currency(opportunity_total_services__c)}}</td>
-                </tr>  
-              </tbody>
-              <tfoot>
-                <tr data-show-if="Opportunity_Term_Months__c == '24' OR Opportunity_Term_Months__c == '36'">
-                  <td>Total Investment Year 1:</td>
-                  <td class="money">{{number_to_currency(opportunity_total_services__c + opportunity_arr__c)}}</td>
-                </tr>
-                <tr data-show-if="Opportunity_Term_Months__c == '24' OR Opportunity_Term_Months__c == '36">
-                  <td>Total Investment Year 2:</td>
-                  <td class="money">{{number_to_currency(opportunity_arr__c)}}</td>
-                </tr>
-                <tr data-show-if="Opportunity_Term_Months__c == '36'">
-                  <td>Total Investment Year 3:</td>
-                  <td class="money">{{number_to_currency(opportunity_arr__c)}}</td>
-                </tr>
-                <tr>
-                  <td><strong>Total Contract Investment:</strong></td>
-                  <td class="money"><span><strong>{{number_to_currency(opportunity_amount)}}</strong></span></td>
-                </tr>
-              </tfoot>
-            </table>
-          </li>
-        </ul>
-      </div>
+        <table class="custom_pricing octiv-brand-two-table" data-filter="PricebookEntry.Product2.Family LIKE 'Subscription'" data-sort="PricebookEntry.Product2.ProductCode" data-source="OpportunityLineItems">
+          <thead>
+            <tr>
+              <th>Subscriptions</th>
+              <th>Annual Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="octiv-product-name"><span class="integer" data-show-if="PricebookEntry.Product2.Name LIKE 'Licenses' OR PricebookEntry.Product2.Name LIKE 'for Octiv' OR PricebookEntry.Product2.Name LIKE 'Sandbox'">[Quantity]</span><span>[PricebookEntry.Product2.Name]</span></div>
+                <div class="octiv-product-details"><span data-show-if="PricebookEntry.Product2.Name LIKE 'Octiv &amp; DocuSign'">[Product2.Description]<br /><span class="money" data-show-if="Opportunity_Display_Octiv_DocuSign_Bundle_Splits__c == 'true'">[Octiv_Price_Split__c]/user/month for Octiv<br />[DocuSign_Price_Split__c]/user/month for DocuSign<br /></span><span data-show-if="Opportunity_Display_Octiv_DocuSign_Bundle_Splits__c != 'true'"><span data-show-if="PricebookEntry.Product2.Family != 'Subscription Features'"><span class="money">[Unit_Price__c]</span><span data-show-if="PricebookEntry.Product2.Name LIKE 'Licenses' OR PricebookEntry.Product2.Name LIKE 'for Octiv'">/user</span>/month </span></span></span><span data-show-if="PricebookEntry.Product2.Name NLIKE 'Octiv &amp; DocuSign'"><span data-show-if="PricebookEntry.Product2.Family != 'Subscription Features'"><span class="money">[Unit_Price__c]</span><span data-show-if="PricebookEntry.Product2.Name LIKE 'Licenses' OR PricebookEntry.Product2.Name LIKE 'for Octiv'">/user</span>/month </span></span>
+                <p class="octiv-product-description" data-show-if="Description IS NOT BLANK">[Description]</p>
+              </div>
+            </td>
+            <td class="money"><span data-show-if="PricebookEntry.Product2.Family != 'Subscription Features'">[ARR__c]</span><span data-show-if="PricebookEntry.Product2.Family = 'Subscription Features'"><em>Included</em></span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+          <td>Annual Subscription Investment:</td>
+          <td class="money">{{number_to_currency(opportunity_arr__c)}}</td>
+        </tr>
+        </tfoot>
+      </table>
+      <table class="custom_pricing octiv-brand-three-table" data-filter="PricebookEntry.Product2.Family NLIKE 'Subscription'" data-sort="PricebookEntry.Product2.ProductCode" data-source="OpportunityLineItems">
+        <thead>
+          <tr>
+            <th>One-Time Services</th>
+            <th>Annual Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="octiv-product-name"><span data-show-if="PricebookEntry.Product2.Name LIKE 'Custom'"><span class="integer">[Quantity]</span>Hour<span data-show-if="Quantity &gt; '1'">s</span> - </span> [PricebookEntry.Product2.Name]</div>
+              <div class="octiv-product-details">
+                <p class="octiv-product-description" data-show-if="Description IS NOT BLANK">[Description]</p>
+              </div>
+            </td>
+            <td class="money"><span data-hide-if="PricebookEntry.Product2.Name LIKE 'Free Trial'">[TotalPrice]</span><span data-show-if="PricebookEntry.Product2.Name LIKE 'Free Trial'"><em>Completed</em></span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+          <td>One-Time Services Investment:</td>
+          <td class="money">{{number_to_currency(opportunity_total_services__c)}}</td>
+        </tr>
+        </tfoot>
+      </table>
+      <table class="octiv-brand-table">
+        <thead>
+          <tr>
+            <th>Totals</th>
+            <th>Annual Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-source="OpportunityLineItems" data-show-if="PricebookEntry.Product2.Family LIKE 'Subscription'">
+            <td>
+              <div class="octiv-product-name">Annual Subscription Investment:&nbsp;</div>
+            </td>
+            <td class="money">{{number_to_currency(opportunity_arr__c)}}</td>
+          </tr>
+          <tr data-source="OpportunityLineItems" data-show-if="PricebookEntry.Product2.Family NLIKE 'Subscription'">
+            <td>
+              <div class="octiv-product-name">One-Time Services Investment:</div>
+            </td>
+            <td class="money">{{number_to_currency(opportunity_total_services__c)}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+        <tr data-show-if="Opportunity_Term_Months__c == '24' OR Opportunity_Term_Months__c == '36'">
+          <td>Total Investment Year 1:</td>
+          <td class="money">{{number_to_currency(opportunity_total_services__c + opportunity_arr__c)}}</td>
+        </tr>
+        <tr data-show-if="Opportunity_Term_Months__c == '24' OR Opportunity_Term_Months__c == '36">
+          <td>Total Investment Year 2:</td>
+          <td class="money">{{number_to_currency(opportunity_arr__c)}}</td>
+        </tr>
+        <tr data-show-if="Opportunity_Term_Months__c == '36'">
+          <td>Total Investment Year 3:</td>
+          <td class="money">{{number_to_currency(opportunity_arr__c)}}</td>
+        </tr>
+        <tr>
+          <td>Total Contract Investment:</td>
+          <td class="money">{{number_to_currency(opportunity_amount)}}<span></span></td>
+        </tr>
+        </tfoot>
+      </table>
     </div>
-  </section>
+  </div>
+</section>
 </div>
-<div style="page-break-after: always;"></div>

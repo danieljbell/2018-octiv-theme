@@ -13,6 +13,7 @@
   }
   @include print {
     margin-top: -0.75in;
+    margin-bottom: -0.5in;
     padding: 0.25in;
   }
 
@@ -40,4 +41,8 @@
 .octiv-after-notch {
   padding-top: 60px !important;
   margin-top: -30px;
+  @include print {
+    padding-top: 0.4375in !important;
+    margin-top: 0.25in;
+  }
 }

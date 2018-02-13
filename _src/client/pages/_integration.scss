@@ -3,7 +3,11 @@
   .octiv-hero {
     display: table;
     background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545);
+    background-size: auto;
     min-height: 200px;
+    @include print {
+      margin-bottom: -0.25in;
+    }
 
     &:before,
     &:after {
@@ -84,6 +88,9 @@
   .octiv-why-integration,
   .octiv-integration-capabilities {
     margin-top: 2.5em;
+    @include print {
+      margin-top: 1.5em;
+    }
   }
 
   .octiv-icon-item,
@@ -130,4 +137,12 @@
 
 @page octiv-integration--oracle-cpq {
   margin-bottom: -0.5in;
+}
+
+.octiv-integration--formstack {
+  .octiv-hero {
+    @include print {
+      margin-bottom: -0.5in;
+    }
+  }
 }

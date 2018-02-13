@@ -18,6 +18,7 @@
     background-color: $color;
     #content_editor &,
     .pdf-page-content & {
+      font-size: 0.9em !important;
       margin-bottom: 0;
     }
   }

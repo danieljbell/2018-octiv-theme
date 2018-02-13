@@ -1,4 +1,10 @@
 .octiv-terms-conditions {
+
+  .octiv-hero {
+    @include print {
+      margin-bottom: -0.25in;
+    }
+  }
   
   .octiv-color-cards li {
     @include print {

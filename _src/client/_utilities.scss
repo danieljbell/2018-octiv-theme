@@ -55,6 +55,9 @@
 #content_editor .octiv-pad-b,
 .pdf-page-content .octiv-pad-b {
   padding-bottom: 30px !important;
+  @include print {
+    padding-bottom: 0in !important;
+  }
   &-more {
     padding-bottom: 60px !important;
   }
@@ -113,6 +116,9 @@
 #content_editor .octiv-mar-b,
 .pdf-page-content .octiv-mar-b {
   margin-bottom: 30px !important;
+  @include print {
+    margin-bottom: 0.125in !important;
+  }
   &-more {
     margin-bottom: 60px !important;
     @include print {

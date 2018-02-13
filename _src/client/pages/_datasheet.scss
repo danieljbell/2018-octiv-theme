@@ -30,9 +30,9 @@
     }
   }
 
-  .octiv-advantages {
-    margin-top: 45px; 
-  }
+  // .octiv-advantages {
+  //   margin-top: 45px; 
+  // }
 
   .octiv-icon-item {
     text-align: left;
@@ -89,7 +89,7 @@
   }
 
   .octiv-datasheet-features {
-    margin-top: 45px;
+    // margin-top: 45px;
 
     li {
       font-size: 0.8em !important;
@@ -143,7 +143,11 @@
 
   .octiv-competitor-capabilities {
     margin-top: 60px;
-    page-break-inside: avoid;
+    page-break-inside: auto !important;
+
+    .octiv-color-card-brand {
+      page-break-inside: auto !important;      
+    }
     
     .octiv-competitor-table-key {
       list-style-type: none;
