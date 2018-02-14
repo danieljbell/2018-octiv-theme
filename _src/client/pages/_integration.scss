@@ -5,6 +5,13 @@
     background-image: url(https://mytinder.s3.amazonaws.com/assets/medias/589372_original.png?1516293545);
     background-size: auto;
     min-height: 200px;
+    #content_editor &,
+    .pdf-page-content & {
+      padding: 45px 100px 65px !important;
+      @include print {
+        padding: 0.5in 0.75in !important;
+      }
+    }
     @include print {
       margin-bottom: -0.25in;
     }
@@ -114,6 +121,15 @@
     min-height: 150px;
   }
 
+}
+
+.octiv-integration--zuora {
+  page: octiv-integration--zuora;
+}
+
+@page octiv-integration--zuora {
+  margin-bottom: -0.5in;
+  min-height: 11in;
 }
 
 .octiv-integration--salesforce-cpq {

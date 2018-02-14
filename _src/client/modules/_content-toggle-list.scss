@@ -94,6 +94,8 @@
 
 .octiv-content-toggle-list--implementation {
   display: table;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   min-height: 10em;
   @include print {
