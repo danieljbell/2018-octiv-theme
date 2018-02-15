@@ -156,9 +156,15 @@
 }
 
 .octiv-integration--formstack {
+  page: octiv-integration--formstack;
   .octiv-hero {
     @include print {
       margin-bottom: -0.5in;
     }
   }
+}
+
+@page octiv-integration--formstack {
+  margin-bottom: 0;
+  min-height: 11in;
 }

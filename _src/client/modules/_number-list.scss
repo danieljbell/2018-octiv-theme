@@ -4,6 +4,7 @@
 
   li {
     position: relative;
+    counter-increment: octiv-fancy-number-list;
     #content_editor &,
     .pdf-page-content & {
       padding-left: 1.25em;
@@ -11,7 +12,6 @@
     }
     
     &:before {
-      counter-increment: octiv-fancy-number-list;
       content: counter(octiv-fancy-number-list);
       position: absolute;
       top: -0.25em;
@@ -31,8 +31,11 @@
 
   ol {
     list-style-type: lower-alpha;
-    li:before {
-      display: none;
+    li {
+      counter-increment: none;
+      &:before {
+        display: none;
+      }
     }
   }
 

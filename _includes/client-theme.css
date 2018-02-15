@@ -276,28 +276,32 @@ body.content #content_editor section { padding: 0; }
 .octiv-brand-three-table tfoot tr:last-child td:first-child { border-bottom-left-radius: 5px; }
 .octiv-brand-three-table tfoot tr:last-child td:last-child { border-bottom-right-radius: 5px; }
 .octiv-number-list-brand-two { counter-reset: octiv-fancy-number-list; list-style-type: none; }
-.octiv-number-list-brand-two li { position: relative; }
+.octiv-number-list-brand-two li { position: relative; counter-increment: octiv-fancy-number-list; }
 #content_editor .octiv-number-list-brand-two li, .pdf-page-content .octiv-number-list-brand-two li { padding-left: 1.25em; margin-bottom: 1em; }
-.octiv-number-list-brand-two li:before { counter-increment: octiv-fancy-number-list; content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #42b0d8; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
+.octiv-number-list-brand-two li:before { content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #42b0d8; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
 .octiv-number-list-brand-two ol { list-style-type: lower-alpha; }
+.octiv-number-list-brand-two ol li { counter-increment: none; }
 .octiv-number-list-brand-two ol li:before { display: none; }
 .octiv-number-list-brand-three { counter-reset: octiv-fancy-number-list; list-style-type: none; }
-.octiv-number-list-brand-three li { position: relative; }
+.octiv-number-list-brand-three li { position: relative; counter-increment: octiv-fancy-number-list; }
 #content_editor .octiv-number-list-brand-three li, .pdf-page-content .octiv-number-list-brand-three li { padding-left: 1.25em; margin-bottom: 1em; }
-.octiv-number-list-brand-three li:before { counter-increment: octiv-fancy-number-list; content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #33ab40; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
+.octiv-number-list-brand-three li:before { content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #33ab40; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
 .octiv-number-list-brand-three ol { list-style-type: lower-alpha; }
+.octiv-number-list-brand-three ol li { counter-increment: none; }
 .octiv-number-list-brand-three ol li:before { display: none; }
 .octiv-number-list-brand-four { counter-reset: octiv-fancy-number-list; list-style-type: none; }
-.octiv-number-list-brand-four li { position: relative; }
+.octiv-number-list-brand-four li { position: relative; counter-increment: octiv-fancy-number-list; }
 #content_editor .octiv-number-list-brand-four li, .pdf-page-content .octiv-number-list-brand-four li { padding-left: 1.25em; margin-bottom: 1em; }
-.octiv-number-list-brand-four li:before { counter-increment: octiv-fancy-number-list; content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #b949f5; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
+.octiv-number-list-brand-four li:before { content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #b949f5; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
 .octiv-number-list-brand-four ol { list-style-type: lower-alpha; }
+.octiv-number-list-brand-four ol li { counter-increment: none; }
 .octiv-number-list-brand-four ol li:before { display: none; }
 .octiv-number-list-brand-five { counter-reset: octiv-fancy-number-list; list-style-type: none; }
-.octiv-number-list-brand-five li { position: relative; }
+.octiv-number-list-brand-five li { position: relative; counter-increment: octiv-fancy-number-list; }
 #content_editor .octiv-number-list-brand-five li, .pdf-page-content .octiv-number-list-brand-five li { padding-left: 1.25em; margin-bottom: 1em; }
-.octiv-number-list-brand-five li:before { counter-increment: octiv-fancy-number-list; content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #fac500; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
+.octiv-number-list-brand-five li:before { content: counter(octiv-fancy-number-list); position: absolute; top: -0.25em; left: -1em; background-color: #fac500; color: #fff; height: 30px; width: 30px; border-radius: 50%; line-height: 30px; font-size: 0.9em; font-weight: bold; text-align: center; }
 .octiv-number-list-brand-five ol { list-style-type: lower-alpha; }
+.octiv-number-list-brand-five ol li { counter-increment: none; }
 .octiv-number-list-brand-five ol li:before { display: none; }
 .octiv-footnote { font-style: italic; }
 #content_editor .octiv-footnote, .pdf-page-content .octiv-footnote { font-size: 0.7em; line-height: 1.4 !important; }
@@ -348,6 +352,9 @@ body.content #content_editor section { padding: 0; }
 @page octiv-integration--salesforce-cpq { margin-bottom: -0.5in; }
 .octiv-integration--oracle-cpq { page: octiv-integration--oracle-cpq; }
 @page octiv-integration--oracle-cpq { margin-bottom: -0.5in; }
+.octiv-integration--formstack { page: octiv-integration--formstack; }
+@page octiv-integration--formstack { margin-bottom: 0;
+  min-height: 11in; }
 .octiv-datasheet .octiv-block-quote-highlight { background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f0f0f0)); background-image: -webkit-linear-gradient(#fff, #f0f0f0); background-image: -o-linear-gradient(#fff, #f0f0f0); background-image: linear-gradient(#fff, #f0f0f0); border: 1px solid #ccc; padding: 1em; border-radius: 4px; float: right; max-width: 45%; font-weight: bold; }
 #content_editor .octiv-datasheet .octiv-block-quote-highlight, .pdf-page-content .octiv-datasheet .octiv-block-quote-highlight { margin: 0 0 2em 2em; }
 .octiv-datasheet .octiv-icon-item { text-align: left; display: table; width: 100%; margin-bottom: 2em; }
@@ -386,6 +393,9 @@ body.content #content_editor section { padding: 0; }
 .octiv-datasheet .octiv-integration-visual .octiv-integration-visual-item:nth-child(7) { -webkit-animation-name: integrationSix; animation-name: integrationSix; -webkit-animation-delay: 1.5s; animation-delay: 1.5s; }
 .octiv-datasheet--overview { page: octiv-datasheet--overview; }
 @page octiv-datasheet--overview { margin-bottom: -0.5in; }
+.octiv-terms-conditions--premium-support { page: octiv-terms-conditions--premium-support; }
+@page octiv-terms-conditions--premium-support { margin-bottom: 0;
+  min-height: 11in; }
 @page octiv-order-form { min-height: 11in; }
 .octiv-order-form { page: octiv-order-form; }
 .octiv-order-form .octiv-order-form-details-list { list-style-type: none; }
